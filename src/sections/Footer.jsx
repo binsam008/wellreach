@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Logo */}
         <div>
-          <img src="/navlogo.png" className="h-10 mb-4" alt="logo" />
+          <img src="./navlogo.png" className="h-10 mb-4" alt="logo" />
         </div>
 
         {/* Services Provided */}
