@@ -68,11 +68,11 @@ export default function WhyChoose() {
 
           {/* Center Image */}
           <div className="flex justify-center">
-            <img
-              src="/assets/why-choose-truck.png"
-              alt="Well Reach Logistics Truck"
-              className="max-h-[420px] object-contain"
-            />
+              <img
+                src="./why-choose-truck.png"
+                alt="Well Reach Logistics Truck"
+                className="h-[450px] scale-[1.15] transition-all duration-300"
+              />
           </div>
 
           {/* Right cards */}

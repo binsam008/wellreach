@@ -41,7 +41,7 @@ export default function AboutUs() {
             {/* Big image */}
             <div className="row-span-2 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/assets/about-ship.jpg"
+                src="./about-ship.png"
                 alt="Container Ship"
                 className="w-full h-full object-cover"
               />
@@ -50,7 +50,7 @@ export default function AboutUs() {
             {/* Top small image */}
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/assets/about-warehouse.jpg"
+                src="./about-warehouse.png"
                 alt="Warehouse"
                 className="w-full h-full object-cover"
               />
@@ -59,7 +59,7 @@ export default function AboutUs() {
             {/* Bottom small image */}
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/assets/about-inspection.jpg"
+                src="./about-inspection.png"
                 alt="Container Inspection"
                 className="w-full h-full object-cover"
               />

@@ -113,7 +113,7 @@ export default function Navbar() {
           transition-all duration-300
           ${
             scrolled
-              ? "backdrop-blur-md bg-white/50 shadow-md"
+              ? "backdrop-blur-md bg-purple-500/30 shadow-md"
               : "bg-transparent shadow-none"
           }
         `}
@@ -123,7 +123,7 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-9 w-auto" />
+              <img src="/navlogo.png" alt="Logo" className="h-9 w-auto" />
             </Link>
 
             {/* Desktop Nav */}
@@ -132,7 +132,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   to={item.to}
-                  className="text-black hover:text-[var(--brand-600)] transition font-medium"
+                  className="text-white hover:text-(--brand-600) transition font-medium"
                 >
                   {item.name}
                 </Link>
@@ -178,7 +178,7 @@ export default function Navbar() {
                     key={item.name}
                     to={item.to}
                     onClick={() => setIsOpen(false)}
-                    className="block text-lg hover:text-[var(--brand-600)] transition"
+                    className="block text-lg hover:text-(--brand-600) transition"
                   >
                     {item.name}
                   </Link>

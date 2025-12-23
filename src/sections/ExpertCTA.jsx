@@ -6,12 +6,21 @@ export default function ExpertCTA() {
     <section className="px-4 sm:px-6 py-8">
       <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl min-h-[420px]">
 
-        {/* Background image */}
-        <img
-          src="/assets/expert-hero.png"
-          alt="Logistics container ship"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {/* Responsive Background */}
+        <picture>
+          {/* Desktop (≥768px) */}
+          <source
+            srcSet="./expert-hero-desktop.png"
+            media="(min-width: 768px)"
+          />
+
+          {/* Mobile (<768px) */}
+          <img
+            src="./expert-hero-mobile.png"
+            alt="Logistics container ship"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </picture>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-transparent" />

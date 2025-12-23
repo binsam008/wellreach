@@ -2,13 +2,20 @@
 import React, { useState } from "react";
 
 const SERVICES = [
-  { id: "air", title: "Air Freight", desc: "Fast international air freight with customs handling.", img: "/air.png" },
-  { id: "ocean", title: "Ocean Freight", desc: "Cost-effective sea freight solutions for large shipments.", img: "/ocean.png" },
-  { id: "customs", title: "Custom Clearance", desc: "End-to-end customs brokerage and clearance help.", img: "/customs.png" },
-  { id: "events", title: "Event & Project Cargo", desc: "Specialized handling for project and event logistics.", img: "/assets/events.jpg" },
-  { id: "land", title: "Land Transport", desc: "Local last-mile and long-haul trucking options.", img: "/assets/truck.jpg" },
-  { id: "express", title: "International Courier", desc: "Fast document and parcel courier services worldwide.", img: "/assets/courier.jpg" },
+  { id: "air-freight", title: "Air Freight", img: "/services/air.jpg" },
+  { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.jpg" },
+  { id: "international-courier", title: "International Courier", img: "/services/international-courier.jpg" },
+  { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/events.jpg" },
+  { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/dg.jpg" },
+  { id: "custom-clearance", title: "Custom Clearance", img: "/services/custom.jpg" },
+  { id: "excess-baggage", title: "Excess Baggage", img: "/services/excess.jpg" },
+  { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/ata.jpg" },
+  { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/warehouse1.jpg" },
+  { id: "warehouse-management-2", title: "Warehouse Management", img: "/services/warehouse2.jpg" },
+  { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/insurance.jpg" },
+  { id: "cargos", title: "Cargos", img: "/services/cargo.jpg" },
 ];
+
 
 function ServiceCard({ s }) {
   const [failed, setFailed] = useState(false);
