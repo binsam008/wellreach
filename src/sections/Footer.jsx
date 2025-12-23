@@ -50,7 +50,7 @@ export default function Footer() {
 
       {/* Mobile Layout */}
       <div className="md:hidden text-center px-6">
-        <img src="/logo.png" className="h-10 mx-auto mb-6" alt="logo" />
+        <img src="/navlogo.png" className="h-10 mx-auto mb-6" alt="logo" />
 
         <h3 className="font-semibold mb-2 text-[#ffffff]">Services Provided</h3>
         <ul className="text-sm space-y-1 mb-6">
