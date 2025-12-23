@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
 {/* ======================= HERO SECTION ======================= */}
+{/* ======================= HERO SECTION ======================= */}
 <div className="relative w-full overflow-hidden min-h-[750px] md:min-h-[900px]">
 
   {/* -------- DESKTOP BACKGROUND -------- */}
@@ -40,36 +41,41 @@ export default function Home() {
     "
   />
 
-  {/* OVERLAY */}
-  <div
-    className="
-      absolute inset-0
-      bg-gradient-to-b from-black/10 via-black/25 to-black/70
-      pointer-events-none
-    "
-  ></div>
-
   {/* ======================= DESKTOP TEXT ======================= */}
-  <div className="hidden md:flex items-center py-40 relative z-20">
+  <div className="hidden md:flex items-center py-70 relative z-20">
 
     {/* LEFT SIDE CONTENT WRAPPER */}
     <div className="w-1/2 flex flex-col justify-center pl-14">
 
-      <h1 className="text-white font-extrabold leading-none text-[80px] drop-shadow-xl">
+      {/* ✔ ANTON HEADING */}
+      <h1
+        className="
+          text-white
+          leading-none
+          text-[100px]
+          drop-shadow-xl
+          font-['Anton',sans-serif]
+          tracking-tight
+          opacity-75
+        "
+      >
         DELIVERING YOUR <br />
         CARGO <br />
         WORLDWIDE
       </h1>
 
+      {/* ✔ SIMPLE CAL-SANS STYLE BUTTON */}
       <button
         className="
           mt-10 px-10 py-4 rounded-full 
-          bg-white text-purple-900 font-semibold shadow-xl
+          bg-white text-[color:var(--brand-600)]
+          font-semibold shadow-xl
           hover:bg-gray-200 hover:scale-105 transition-all duration-200
-          w-fit
+          w-fit flex items-center gap-2
         "
       >
-        Explore what we do →
+        Explore what we do
+        <span className="text-xl">▶</span>
       </button>
 
     </div>
@@ -77,21 +83,36 @@ export default function Home() {
 
   {/* ======================= MOBILE TEXT ======================= */}
   <div className="flex md:hidden flex-col items-center text-center relative z-20 px-6 pt-[480px] pb-12">
-    <h1 className="text-white font-extrabold leading-[1.1] text-[42px] drop-shadow-xl">
+
+    {/* ✔ ANTON MOBILE HEADING */}
+    <h1
+      className="
+        text-white font-['Anton',sans-serif]
+        leading-[1.1]
+        text-[42px]
+        drop-shadow-xl
+        opacity-75
+      "
+    >
       DELIVERING YOUR <br />
       CARGO <br />
       WORLDWIDE
     </h1>
 
+    {/* ✔ BUTTON SAME STYLE */}
     <button
       className="
         mt-6 px-8 py-3 rounded-full 
-        bg-white text-purple-900 font-semibold shadow-xl
+        bg-white text-[color:var(--brand-600)]
+        font-semibold shadow-xl
         hover:bg-gray-200 hover:scale-105 transition-all duration-200
+        flex items-center gap-2
       "
     >
-      Explore what we do →
+      Explore what we do
+      <span className="text-xl">▶</span>
     </button>
+
   </div>
 
 </div>

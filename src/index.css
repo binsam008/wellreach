@@ -1,24 +1,82 @@
+/* ------------------------------
+   FONT IMPORTS
+------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cal+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 /* Tailwind v4 entry */
 @import "tailwindcss";
 
-/* small helpers */
-:root{
-  --brand-600: #5154B6; /* indigo-ish for accents */
+/* ------------------------------
+   ROOT + GLOBALS
+------------------------------ */
+:root {
+  --brand-600: #5154B6; 
   --muted: #6b7280;
 }
-html,body,#root{height:100%}
-body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:#F8FAFC}
 
-/* container helper */
-.container{max-width:1160px;margin-left:auto;margin-right:auto}
+/* Full height layout */
+html, body, #root {
+  height: 100%;
+}
 
-/* little card shadow used in UI */
-.card-shadow{box-shadow:0 6px 18px rgba(15,23,42,0.08)}
+/* Body font = Inter */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #F8FAFC;
+}
 
-/* rounded card accent */
-.accent-pill{background:linear-gradient(180deg,rgba(91,33,182,0.12),rgba(91,33,182,0.04));border-radius:16px}
-/* font family */
-body { font-family: 'Poppins', sans-serif; }
+/* Container helper */
+.container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------
+   CAL SANS HEADING FONT
+------------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cal Sans', sans-serif;
+}
+
+/* Optional: utility for JSX */
+.font-calsans {
+  font-family: 'Cal Sans', sans-serif;
+}
+
+/* ------------------------------
+   UI STYLING
+------------------------------ */
+
+/* Card shadows */
+.card-shadow {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
+}
+
+/* Accent pill */
+.accent-pill {
+  background: linear-gradient(180deg, rgba(91,33,182,0.12), rgba(91,33,182,0.04));
+  border-radius: 16px;
+}
+
+/* Floating side glass effect */
+.float-side {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  border-radius: 9999px;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+}
+
+/* Placeholder image style */
+img[alt="placeholder"] {
+  opacity: 0.9;
+}
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
 
 /* Blinking cursor */
 @keyframes blink {
@@ -39,68 +97,49 @@ body { font-family: 'Poppins', sans-serif; }
   animation: fadeUp 0.8s ease-out both;
 }
 
-/* Card shadow (for your service cards, optional) */
-.card-shadow {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-/* small fade-in/translate used for section entrance */
+/* Section entrance fade/slide */
 @keyframes sectionIn {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-/* optional class if you want to force animation via CSS; JS sets inline classes */
 .section-animate {
   animation: sectionIn 800ms cubic-bezier(.2,.9,.3,1) both;
 }
 
-/* card shadow (if not already present) */
-.card-shadow { box-shadow: 0 10px 30px rgba(2,6,23,0.12); }
-
-/* helper for clickable pager buttons */
-button:focus { outline: none; box-shadow: 0 0 0 3px rgba(107,33,168,0.12); }
-/* Make sure brand var exists (or replace with color value) */
-:root {
-  --brand-600: #6b21a8;
-}
-
-/* small rounded container and glass effect (optional) */
-.float-side {
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
-  border-radius: 9999px;
-  padding: 6px;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
-}
+/* Slide-in from left */
 @keyframes slide-right {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
 }
-
 .animate-slide-right {
   animation: slide-right 0.35s ease-out;
 }
 
-/* optional placeholder card style */
-img[alt="placeholder"] { opacity: 0.9; }
-
-/* tiny utility if you want a loading skeleton later */
+/* Shimmer skeleton loading */
+@keyframes shimmer {
+  0% { background-position: 200% 0 }
+  100% { background-position: -200% 0 }
+}
 .skeleton {
-  background: linear-gradient(90deg,#f3f4f6 0%,#eceff1 50%,#f3f4f6 100%);
+  background: linear-gradient(90deg, #f3f4f6 0%, #eceff1 50%, #f3f4f6 100%);
   background-size: 200% 100%;
   animation: shimmer 1.2s linear infinite;
 }
-@keyframes shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }
-@keyframes band-text-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 
+/* Auto-moving text strip */
+@keyframes band-text-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 .band-text-track {
   animation: band-text-scroll linear infinite;
+}
+
+/* Buttons focus highlight */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107,33,168,0.12);
+}
+.text-justify {
+  text-align: justify;
 }
