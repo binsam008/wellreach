@@ -120,19 +120,19 @@ export default function Home() {
       <TextBand />
 
       {/* ======================= ABOUT SECTION ======================= */}
-      <section id="about" className="container mx-auto px-6 py-12">
+      <section id="about" className=" mx-auto px-6 py-12">
        <AboutUs />
       </section>
 
       <TextBand />
 
       {/* ======================= SERVICES PREVIEW ======================= */}
-      <section id="services" className="container mx-auto px-6 py-12">
+      <section id="services" className=" mx-auto px-6 py-12">
         <ServicesPreview />
       </section>
 <TextBand />
       {/* ======================= WHY CHOOSE ======================= */}
-      <section id="whychoose" className="container mx-auto px-6 py-8">
+      <section id="whychoose" className=" mx-auto px-6 py-8">
         <WhyChoose />
       </section>
 
@@ -142,7 +142,7 @@ export default function Home() {
       </section> */}
 
       {/* ======================= EXPERT CTA ======================= */}
-      <section id="expert" className="container mx-auto px-6 py-12">
+      <section id="expert" className="mx-auto px-6 py-12">
         <ExpertCTA />
       </section>
 

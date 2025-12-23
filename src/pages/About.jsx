@@ -4,7 +4,7 @@ import Footer from "../sections/Footer";
 export default function About() {
   return (
     <>
-      <div className="container mx-auto px-6 py-12">
+      <div className="container px-6 py-12">
 
         {/* ABOUT US */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-20">
@@ -38,7 +38,7 @@ export default function About() {
             <img
               src="/about-image.png"
               alt="Container Port"
-              className="w-full rounded-2xl shadow-lg object-cover"
+              className="w-5xl h-160 rounded-2xl shadow-lg object-cover"
             />
           </div>
         </div>

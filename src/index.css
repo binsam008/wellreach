@@ -143,3 +143,15 @@ button:focus {
 .text-justify {
   text-align: justify;
 }
+.band-track {
+  animation: bandScroll linear infinite;
+}
+
+@keyframes bandScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}

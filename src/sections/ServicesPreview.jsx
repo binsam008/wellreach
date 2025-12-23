@@ -106,7 +106,7 @@ export default function ServicesPreview() {
   const visible = expanded ? SERVICES : SERVICES.slice(0, 3);
 
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-center text-[20px] sm:text-2xl font-semibold text-[color:var(--brand-600)] mb-6">
         Shipping & Logistics Services
       </h2>
