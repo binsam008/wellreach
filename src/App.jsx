@@ -24,7 +24,7 @@ export default function App() {
         <Sidebar open={open} onClose={() => setOpen(false)} /> */}
 
         {/* Floating vertical icon bar for desktop */}
-        <SidebarFloating />
+        {/* <SidebarFloating /> */}
 
         {/* Page content */}
         <main className="pt-0">

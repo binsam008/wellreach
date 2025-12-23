@@ -1,61 +1,97 @@
 import React from "react";
-import { FiShield, FiClock, FiGlobe, FiDollarSign } from "react-icons/fi";
+import {
+  FiShield,
+  FiClock,
+  FiGlobe,
+  FiDollarSign,
+} from "react-icons/fi";
 
 export default function WhyChoose() {
-  const items = [
+  const leftItems = [
     {
       icon: <FiShield />,
       title: "Trusted & Insured",
-      body: "Your cargo is protected, insured and handled with care.",
+      body: "Insured logistics you can rely on every step of the way",
     },
     {
       icon: <FiClock />,
       title: "On Time Delivery",
-      body: "Reliable schedules and proactive alerts.",
+      body: "Your goods delivered right on schedule, without delays",
     },
+  ];
+
+  const rightItems = [
     {
       icon: <FiGlobe />,
       title: "Nationwide Reach",
-      body: "Extensive carrier network for broad coverage.",
+      body: "Wherever your cargo needs to go, we deliver across the country.",
     },
     {
       icon: <FiDollarSign />,
       title: "Affordable Rates",
-      body: "Competitive pricing for every business size.",
+      body: "Quality logistics services at prices that fit your budget.",
     },
   ];
 
-  return (
-    <div className="w-full">
-      {/* Heading */}
-      <h2 className="text-center text-xl sm:text-2xl font-semibold mb-6 text-[color:var(--brand-600)]">
-        Why Choose Us
-      </h2>
-
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {items.map((it, idx) => (
-          <div
-            key={idx}
-            className="p-5 rounded-2xl bg-[color:var(--brand-600)] text-white shadow-md"
-          >
-            <div className="flex items-start gap-4">
-              {/* Icon */}
-              <div className="bg-white text-[color:var(--brand-600)] p-3 rounded-xl shadow-sm text-xl">
-                {it.icon}
-              </div>
-
-              {/* Text */}
-              <div>
-                <h4 className="font-semibold text-base">{it.title}</h4>
-                <p className="text-sm mt-1 opacity-90 leading-snug">
-                  {it.body}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
+  const Card = ({ icon, title, body }) => (
+    <div className="bg-[color:var(--brand-600)] text-white p-6 rounded-2xl shadow-md">
+      <div className="flex gap-4 items-start">
+        <div className="text-xl">{icon}</div>
+        <div>
+          <h4 className="font-semibold text-base">{title}</h4>
+          <p className="text-sm mt-1 opacity-90 leading-snug">
+            {body}
+          </p>
+        </div>
       </div>
     </div>
+  );
+
+  return (
+    <section className="px-6 py-16">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-14 text-[color:var(--brand-600)]">
+          Why Choose Us
+        </h2>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:grid grid-cols-3 items-center gap-10">
+
+          {/* Left cards */}
+          <div className="space-y-8">
+            {leftItems.map((item, i) => (
+              <Card key={i} {...item} />
+            ))}
+          </div>
+
+          {/* Center Image */}
+          <div className="flex justify-center">
+            <img
+              src="/assets/why-choose-truck.png"
+              alt="Well Reach Logistics Truck"
+              className="max-h-[420px] object-contain"
+            />
+          </div>
+
+          {/* Right cards */}
+          <div className="space-y-8">
+            {rightItems.map((item, i) => (
+              <Card key={i} {...item} />
+            ))}
+          </div>
+
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:hidden">
+          {[...leftItems, ...rightItems].map((item, i) => (
+            <Card key={i} {...item} />
+          ))}
+        </div>
+
+      </div>
+    </section>
   );
 }

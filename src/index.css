@@ -92,3 +92,15 @@ img[alt="placeholder"] { opacity: 0.9; }
   animation: shimmer 1.2s linear infinite;
 }
 @keyframes shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }
+@keyframes band-text-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.band-text-track {
+  animation: band-text-scroll linear infinite;
+}

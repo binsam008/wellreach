@@ -3,35 +3,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * Navbar with:
- *  - fade + slide show/hide animation
- *  - shadow when page is scrolled
- *  - auto-hide delay (so it doesn't hide immediately)
- *  - only hide after passing the hero (#home) section
- *
- * Behavior: hides on scroll-down, shows on scroll-up (applies on all screen sizes)
- *
- * Configurable parameters below:
- */
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);      // mobile menu
-  const [hidden, setHidden] = useState(false);      // whether navbar is hidden
-  const [scrolled, setScrolled] = useState(false);  // whether user scrolled past tiny threshold (for shadow)
+  const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Config
-  const NAV_HEIGHT = 64;               // px, used for offset math (approx your header size)
-  const AUTO_HIDE_DELAY = 650;         // ms - wait this long after user stops scrolling before hiding
-  const MIN_SCROLL_TO_ENABLE = 100;    // start reacting after this many px scrolled (safety)
-  const ONLY_HIDE_AFTER_HOME = true;   // only auto-hide once past hero section
+  const NAV_HEIGHT = 64;
+  const AUTO_HIDE_DELAY = 650;
+  const MIN_SCROLL_TO_ENABLE = 100;
+  const ONLY_HIDE_AFTER_HOME = true;
 
-  // refs so we can use them in handlers
   const lastScrollYRef = useRef(typeof window !== "undefined" ? window.scrollY : 0);
   const hideTimeoutRef = useRef(null);
-  const isManualShowRef = useRef(false); // if user opens mobile menu, keep navbar visible
+  const isManualShowRef = useRef(false);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
@@ -47,35 +33,30 @@ export default function Navbar() {
         window.requestAnimationFrame(() => {
           const currentY = window.scrollY;
 
-          // set scrolled flag for shadow when user has scrolled a little
+          // detect scroll for transparency toggle
           setScrolled(currentY > 10);
 
-          // determine if we are allowed to auto-hide yet
           const passedHero = heroEl ? currentY > Math.max(heroHeight - NAV_HEIGHT, 0) : true;
-
-          // if ONLY_HIDE_AFTER_HOME is true, don't hide until we've passed hero section
           const canHideNow = ONLY_HIDE_AFTER_HOME ? passedHero : true;
 
-          // if mobile menu is open, keep visible
           if (isOpen) {
-            // keep navbar visible while mobile menu open
             setHidden(false);
             lastScrollYRef.current = currentY;
             ticking = false;
             return;
           }
 
-          // If user scrolled down (currentY > lastY) and beyond MIN_SCROLL_TO_ENABLE and canHideNow -> schedule hide
-          if (currentY > lastScrollYRef.current && currentY > Math.max(MIN_SCROLL_TO_ENABLE, NAV_HEIGHT) && canHideNow) {
-            // user scrolling down -> start auto-hide after delay
-            // clear any existing timer and start a new one
+          if (
+            currentY > lastScrollYRef.current &&
+            currentY > Math.max(MIN_SCROLL_TO_ENABLE, NAV_HEIGHT) &&
+            canHideNow
+          ) {
             if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
             hideTimeoutRef.current = setTimeout(() => {
               setHidden(true);
               hideTimeoutRef.current = null;
             }, AUTO_HIDE_DELAY);
           } else {
-            // user scrolled up OR hasn't reached threshold -> show immediately and cancel hide timer
             if (hideTimeoutRef.current) {
               clearTimeout(hideTimeoutRef.current);
               hideTimeoutRef.current = null;
@@ -86,26 +67,23 @@ export default function Navbar() {
           lastScrollYRef.current = currentY;
           ticking = false;
         });
+
         ticking = true;
       }
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
-        hideTimeoutRef.current = null;
-      }
+      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
     };
   }, [isOpen]);
 
-  // Mobile menu open/close toggle - when opening, ensure navbar is visible
   const openMobileMenu = () => {
     setIsOpen(true);
     setHidden(false);
     isManualShowRef.current = true;
-    // after short time release manual show flag so scroll can hide again when appropriate
     setTimeout(() => (isManualShowRef.current = false), 800);
   };
 
@@ -117,7 +95,6 @@ export default function Navbar() {
     { name: "Get a Quote", to: "/quote" },
   ];
 
-  // Framer variants for slide + fade
   const navVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: "circOut" } },
     hidden:  { opacity: 0, y: -18, transition: { duration: 0.28, ease: "circIn" } },
@@ -130,21 +107,26 @@ export default function Navbar() {
       variants={navVariants}
       className={`fixed left-0 right-0 z-50 top-0 pointer-events-auto`}
     >
-      {/* Outer container: apply shadow when scrolled, keep transitions smooth */}
+      {/* NAV CONTAINER */}
       <div
-        className={`backdrop-blur-sm transition-shadow duration-300 ${
-          scrolled ? "shadow-lg bg-white/80" : "bg-white/90"
-        }`}
-        style={{ borderBottom: "1px solid rgba(0,0,0,0.04)" }}
+        className={`
+          transition-all duration-300
+          ${
+            scrolled
+              ? "backdrop-blur-md bg-white/50 shadow-md"
+              : "bg-transparent shadow-none"
+          }
+        `}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between h-16">
+
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img src="/logo.png" alt="Logo" className="h-9 w-auto" />
             </Link>
 
-            {/* Desktop Navigation (still shown/hide controlled by animation above) */}
+            {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <Link
@@ -160,7 +142,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={openMobileMenu}
-              className="md:hidden p-2 rounded-md text-purple-400"
+              className="md:hidden p-2 rounded-md text-purple-500"
               aria-label="Open menu"
             >
               <Menu size={24} />
@@ -169,7 +151,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile slide-over menu */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
