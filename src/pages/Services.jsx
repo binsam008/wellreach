@@ -97,7 +97,7 @@ function HoverCard({ title, img, desc }) {
       {/* HOVER / CLICK OVERLAY WITH DESCRIPTION */}
       <div
         className={`
-          absolute inset-0 bg-black/60 text-white 
+          absolute inset-0 bg-purple-800 text-white 
           flex flex-col justify-center items-center text-center
           px-6 opacity-0 group-hover:opacity-100 transition duration-500
           ${show ? "opacity-100" : ""}
