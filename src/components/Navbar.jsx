@@ -66,7 +66,7 @@ export default function Navbar() {
             {/* Logo Left */}
             <Link to="/" className="flex items-center">
               <img
-                src="/navlogo.png"
+                src="/nav1.png"
                 alt="Logo"
                 className="h-12 w-auto"
               />
