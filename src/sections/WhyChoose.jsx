@@ -49,7 +49,7 @@ const Card = ({ icon, title, body }) => (
   <div className="bg-[color:var(--brand-600)] text-white p-6 rounded-2xl shadow-md flex flex-col items-start text-start">
     
     {/* ICON TOP (centered + rotating) */}
-    <div className="text-4xl mb-4 animate-slowSpin ">
+    <div className="text-4xl mb-4">
       {icon}
     </div>
 

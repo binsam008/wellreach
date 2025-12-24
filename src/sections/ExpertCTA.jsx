@@ -9,7 +9,7 @@ export default function ExpertCTA() {
         {/* Responsive Background */}
         <picture>
           <source
-            srcSet="./expert-hero-desktop.png"
+            srcSet="/expert-hero-desktop.jpg"
             media="(min-width: 768px)"
           />
 

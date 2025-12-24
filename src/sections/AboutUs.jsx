@@ -53,7 +53,7 @@ time, in the right condition.
             {/* Big image */}
             <div className="row-span-2 rounded-2xl overflow-hidden card-shadow h-140">
               <img
-                src="./about-ship.png"
+                src="./about-ship2.jpg"
                 alt="Container Ship"
                 className="w-full h-full object-cover"
               />
@@ -62,7 +62,7 @@ time, in the right condition.
             {/* Top small image */}
             <div className="rounded-2xl overflow-hidden card-shadow h-66" >
               <img
-                src="./about-warehouse.png"
+                src="./about-warehouse.jpg"
                 alt="Warehouse"
                 className="w-full h-full object-cover"
               />
@@ -71,7 +71,7 @@ time, in the right condition.
             {/* Bottom small image */}
             <div className="rounded-2xl overflow-hidden card-shadow h-66">
               <img
-                src="./about-inspection.png"
+                src="./about-inspection.jpg"
                 alt="Container Inspection"
                 className="w-full h-full object-cover"
               />

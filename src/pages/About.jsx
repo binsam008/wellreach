@@ -4,7 +4,7 @@ import Footer from "../sections/Footer";
 export default function About() {
   return (
     <>
-      <div className="container px-6 py-12">
+      <div className="container px-6 py-25">
 
         {/* ABOUT US */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-20">

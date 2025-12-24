@@ -21,7 +21,7 @@ html, body, #root {
 
 /* Body font = Inter */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   background: #F8FAFC;
 }
 
@@ -36,12 +36,12 @@ body {
    CAL SANS HEADING FONT
 ------------------------------ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cal Sans', sans-serif;
+  font-family: 'Cal Sans';
 }
 
 /* Optional: utility for JSX */
 .font-calsans {
-  font-family: 'Cal Sans', sans-serif;
+  font-family: 'Cal Sans';
 }
 
 /* ------------------------------
@@ -171,3 +171,15 @@ button:focus {
   animation: upDown 3s ease-in-out infinite;
 }
 
+@keyframes textloop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-textloop {
+  animation: textloop linear infinite;
+}

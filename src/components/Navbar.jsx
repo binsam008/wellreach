@@ -9,95 +9,35 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const NAV_HEIGHT = 64;
-  const AUTO_HIDE_DELAY = 650;
-  const MIN_SCROLL_TO_ENABLE = 100;
-  const ONLY_HIDE_AFTER_HOME = true;
+  const isHome = location.pathname === "/";
 
-  const lastScrollYRef = useRef(typeof window !== "undefined" ? window.scrollY : 0);
-  const hideTimeoutRef = useRef(null);
-  const isManualShowRef = useRef(false);
+  // Close mobile menu on route change
+  useEffect(() => setIsOpen(false), [location.pathname]);
 
+  // Detect scroll for HOME page only
   useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const heroEl = document.getElementById("home");
-    const heroHeight = heroEl ? heroEl.getBoundingClientRect().height : 0;
-
-    let ticking = false;
-
     const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentY = window.scrollY;
-
-          // detect scroll for transparency toggle
-          setScrolled(currentY > 10);
-
-          const passedHero = heroEl ? currentY > Math.max(heroHeight - NAV_HEIGHT, 0) : true;
-          const canHideNow = ONLY_HIDE_AFTER_HOME ? passedHero : true;
-
-          if (isOpen) {
-            setHidden(false);
-            lastScrollYRef.current = currentY;
-            ticking = false;
-            return;
-          }
-
-          if (
-            currentY > lastScrollYRef.current &&
-            currentY > Math.max(MIN_SCROLL_TO_ENABLE, NAV_HEIGHT) &&
-            canHideNow
-          ) {
-            if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
-            hideTimeoutRef.current = setTimeout(() => {
-              setHidden(true);
-              hideTimeoutRef.current = null;
-            }, AUTO_HIDE_DELAY);
-          } else {
-            if (hideTimeoutRef.current) {
-              clearTimeout(hideTimeoutRef.current);
-              hideTimeoutRef.current = null;
-            }
-            setHidden(false);
-          }
-
-          lastScrollYRef.current = currentY;
-          ticking = false;
-        });
-
-        ticking = true;
+      if (isHome) {
+        setScrolled(window.scrollY > 10);
       }
     };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
-    };
-  }, [isOpen]);
-
-  const openMobileMenu = () => {
-    setIsOpen(true);
-    setHidden(false);
-    isManualShowRef.current = true;
-    setTimeout(() => (isManualShowRef.current = false), 800);
-  };
-
+  // Nav links
   const navItems = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
     { name: "Services", to: "/services" },
     { name: "Contact", to: "/contact" },
-    { name: "Get a Quote", to: "/quote" },
+    { name: "Incoterms", to: "/incoterms" },
+
   ];
 
   const navVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.32, ease: "circOut" } },
-    hidden:  { opacity: 0, y: -18, transition: { duration: 0.28, ease: "circIn" } },
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -20 },
   };
 
   return (
@@ -105,34 +45,48 @@ export default function Navbar() {
       initial="visible"
       animate={hidden ? "hidden" : "visible"}
       variants={navVariants}
-      className={`fixed left-0 right-0 z-50 top-0 pointer-events-auto`}
+      className="fixed left-0 right-0 top-0 z-50"
     >
-      {/* NAV CONTAINER */}
+      {/* TOP NAVBAR BACKGROUND LOGIC */}
       <div
         className={`
-          transition-all duration-300
+          transition-all duration-300 
           ${
-            scrolled
-              ? "backdrop-blur-md bg-purple-500/30 shadow-md"
-              : "bg-transparent shadow-none"
+            isHome
+              ? scrolled
+                ? "backdrop-blur-md bg-blue-600/30 shadow-md"
+                : "bg-transparent"
+              : "bg-gray-600/30 shadow-md"
           }
         `}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
+          <div className="flex items-center justify-between h-20">
 
-            {/* Logo */}
+            {/* Logo Left */}
             <Link to="/" className="flex items-center">
-              <img src="/navlogo.png" alt="Logo" className="h-9 w-auto" />
+              <img
+                src="/navlogo.png"
+                alt="Logo"
+                className="h-12 w-auto"
+              />
             </Link>
 
-            {/* Desktop Nav */}
-            <div className="hidden md:flex items-center space-x-8">
+            {/* Centered Desktop Links */}
+            <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.to}
-                  className="text-white hover:text-(--brand-600) transition font-medium"
+                  className="
+                    text-white 
+                    font-semibold 
+                    tracking-wide 
+                    text-sm 
+                    uppercase
+                    transition 
+                    hover:text-purple-900
+                  "
                 >
                   {item.name}
                 </Link>
@@ -141,17 +95,16 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={openMobileMenu}
-              className="md:hidden p-2 rounded-md text-purple-500"
-              aria-label="Open menu"
+              onClick={() => setIsOpen(true)}
+              className="md:hidden p-2 rounded-md text-white"
             >
-              <Menu size={24} />
+              <Menu size={28} />
             </button>
           </div>
         </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -161,9 +114,9 @@ export default function Navbar() {
             transition={{ duration: 0.28 }}
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden flex"
           >
-            <div className="rounded-r-2xl w-72 h-full shadow-xl p-6 flex flex-col bg-white">
+            <div className="rounded-r-2xl w-72 h-full bg-white shadow-xl p-6 flex flex-col">
               <div className="flex items-center justify-between mb-6">
-                <img src="/navlogo.png" className="h-9" alt="Logo" />
+                <img src="/navlogo.png" className="h-10" alt="Logo" />
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md bg-gray-200"
@@ -172,13 +125,14 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <nav className="space-y-5 text-gray-800 font-medium">
+              {/* Mobile Nav Items */}
+              <nav className="space-y-5 text-gray-900 font-medium">
                 {navItems.map((item) => (
                   <Link
                     key={item.name}
                     to={item.to}
                     onClick={() => setIsOpen(false)}
-                    className="block text-lg hover:text-(--brand-600) transition"
+                    className="block text-lg hover:text-[#5154B6]"
                   >
                     {item.name}
                   </Link>

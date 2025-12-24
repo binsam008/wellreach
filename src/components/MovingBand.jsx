@@ -1,12 +1,16 @@
 import React from "react";
 
-export default function TextBand({ speed = 50 }) {
+export default function TextBand({ speed = 30 }) {
   const words = ["SHIPPING", "DELIVERY", "WELL REACH LOGISTICS"];
 
   return (
     <div className="w-full overflow-hidden bg-[color:var(--brand-600)] py-3">
       <div
-        className="band-track flex items-center gap-8 whitespace-nowrap hover:[animation-play-state:paused]"
+        className="
+          band-track flex items-center gap-8 whitespace-nowrap 
+          hover:[animation-play-state:paused]
+          animate-textloop
+        "
         style={{ animationDuration: `${speed}s` }}
       >
         {[...words, ...words, ...words].map((word, i) => (

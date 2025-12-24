@@ -17,7 +17,7 @@ export default function Home() {
 
   {/* -------- DESKTOP BACKGROUND -------- */}
   <img
-    src="/hero-desktop.png"
+    src="/hero-desktop.jpg"
     alt="Hero"
     className="
       hidden md:block
@@ -59,9 +59,9 @@ export default function Home() {
     leading-none
     text-[110px]
     drop-shadow-xl
-    font-['Anton',sans-serif]
+    font-['Anton']
     font-bold
-    tracking-tight
+    
     px-2
   "
 >

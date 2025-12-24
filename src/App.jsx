@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Incoterms from "./pages/Incoterms";
 
 // UI components
 import Navbar from "./components/Navbar"; // top bar (has the hamburger)
@@ -33,6 +34,8 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/incoterms" element={<Incoterms />} />
+
           </Routes>
         </main>
       </div>
