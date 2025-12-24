@@ -30,8 +30,8 @@ export default function WhyChoose() {
   const rightItems = [
     {
       icon: <FiGlobe />,
-      title: "Nationwide Reach",
-      body: "We deliver across all regions with complete coverage.",
+      title: "Global Reach",
+      body: "We deliver across the globe with complete coverage.",
     },
     {
       icon: <FiDollarSign />,

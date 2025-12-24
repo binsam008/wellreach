@@ -174,3 +174,22 @@ button:focus {
 .fade-out {
   animation: loaderFadeOut 0.8s ease-out forwards;
 }
+.input-field {
+  @apply w-full border border-gray-300 px-4 py-3 rounded-xl bg-gray-50
+         focus:border-purple-600 focus:ring-2 focus:ring-purple-200 outline-none transition;
+}
+
+.btn-primary {
+  @apply bg-[#4A46C6] text-white px-8 py-3 rounded-xl shadow-lg 
+         hover:shadow-2xl hover:bg-purple-800 transition font-semibold;
+}
+.input-field {
+  @apply w-full border border-gray-300 px-4 py-3 rounded-xl bg-gray-50
+         focus:border-purple-600 focus:ring-2 focus:ring-purple-200 
+         outline-none transition;
+}
+
+.btn-primary {
+  @apply bg-[#4A46C6] text-white px-8 py-3 rounded-xl shadow-lg 
+         hover:shadow-2xl hover:bg-purple-800 transition font-semibold;
+}

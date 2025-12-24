@@ -1,44 +1,44 @@
 import React, { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import Footer from "../sections/Footer";
 
 export default function Services() {
   const services = [
     {
       title: "Air Freight",
-      img: "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/air.jpg",
       desc: "Fastest international air cargo delivery for parcels, documents, and special shipments.",
     },
     {
       title: "Ocean Freight",
-      img: "https://images.unsplash.com/photo-1583318513818-097e5e1de1c8?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/ocean.jpg",
       desc: "Cost-effective global ocean freight for LCL, FCL, and breakbulk shipments.",
     },
     {
       title: "Custom Clearance",
-      img: "https://images.unsplash.com/photo-1596402184326-6567a16d7a44?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/custom.jpg",
       desc: "End-to-end customs documentation, inspection handling, and smooth clearance support.",
     },
     {
       title: "Land Transport",
-      img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/land.jpg",
       desc: "Reliable domestic trucking and last-mile delivery with tracking support.",
     },
     {
       title: "Warehouse Storage",
-      img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/warehouse.jpg",
       desc: "Secure and temperature-controlled warehousing for all shipment types.",
     },
     {
       title: "Cargo Handling",
-      img: "https://images.unsplash.com/photo-1549300461-1e1a9f7b4ae6?auto=format&fit=crop&w=900&q=60",
+      img: "/service-page/cargo.jpg",
       desc: "Professional cargo handling with safety, packaging, and loading/unloading services.",
     },
   ];
 
   return (
     <>
-      <section className="py-25 px-6 md:px-12 max-w-8xl mx-auto text-center">
+      <section className="py-25 px-6 md:px-12 max-w-7xl mx-auto text-center">
+
         {/* HEADING */}
         <h1 className="text-3xl md:text-4xl font-bold text-[#4A46C6]">
           Shipping & Logistics <br /> Services
@@ -57,7 +57,6 @@ export default function Services() {
   );
 }
 
-// ⭐ FINAL COMBINED CARD COMPONENT
 function HoverCard({ title, img, desc }) {
   const [show, setShow] = useState(false);
 
@@ -81,7 +80,7 @@ function HoverCard({ title, img, desc }) {
         "
       />
 
-      {/* HOVER / CLICK OVERLAY */}
+      {/* OVERLAY */}
       <div
         className={`
           absolute inset-0 bg-purple-800 text-white 
