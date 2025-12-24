@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function ExpertCTA() {
   return (
-    <section className="px-4 sm:px-6 py-14">
-      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl min-h-[450px]">
+    <section className="px-4 sm:px-6 section-animate">
+      <div className="relative max-w-8xl  mx-auto overflow-hidden rounded-3xl min-h-[450px]">
 
         {/* Responsive Background */}
         <picture>
@@ -28,7 +28,7 @@ export default function ExpertCTA() {
           className="
             relative z-10
             px-6 sm:px-12 
-            py-16 sm:py-20
+            py-16 sm:py-10
             max-w-[480px]
           "
         >
@@ -52,7 +52,7 @@ export default function ExpertCTA() {
             className="
               mt-5 
               text-white/90 
-              text-sm sm:text-base 
+              text-2xl sm:text-base 
               leading-relaxed
             "
           >

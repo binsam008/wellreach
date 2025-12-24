@@ -155,3 +155,19 @@ button:focus {
     transform: translateX(-33.333%);
   }
 }
+@keyframes slowSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-slowSpin {
+  animation: slowSpin 6s linear infinite;
+}
+
+@keyframes upDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+.animate-upDown {
+  animation: upDown 3s ease-in-out infinite;
+}
+

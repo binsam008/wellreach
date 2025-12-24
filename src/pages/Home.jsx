@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen">
 {/* ======================= HERO SECTION ======================= */}
 {/* ======================= HERO SECTION ======================= */}
-<div className="relative w-full overflow-hidden min-h-[750px] md:min-h-[900px]">
+<div className="relative w-full h-175 overflow-hidden min-h-[150px] md:min-h-[900px]">
 
   {/* -------- DESKTOP BACKGROUND -------- */}
   <img
@@ -22,7 +22,7 @@ export default function Home() {
     className="
       hidden md:block
       absolute inset-0
-      w-full h-full 
+      w-full h-full
       object-cover object-center
       pointer-events-none
     "
@@ -42,27 +42,34 @@ export default function Home() {
   />
 
   {/* ======================= DESKTOP TEXT ======================= */}
-  <div className="hidden md:flex items-center py-70 relative z-20">
+  <div className="hidden md:flex items-center py-50 relative z-20">
 
     {/* LEFT SIDE CONTENT WRAPPER */}
     <div className="w-1/2 flex flex-col justify-center pl-14">
 
       {/* ✔ ANTON HEADING */}
-      <h1
-        className="
-          text-white
-          leading-none
-          text-[100px]
-          drop-shadow-xl
-          font-['Anton',sans-serif]
-          tracking-tight
-          opacity-75
-        "
-      >
-        DELIVERING YOUR <br />
-        CARGO <br />
-        WORLDWIDE
-      </h1>
+<h1
+  className="
+    text-transparent
+    bg-clip-text
+    bg-gradient-to-r
+    from-[#E7EBEE]
+    via-[#E7EBEE]
+    to-[#C6D6DB]
+    leading-none
+    text-[110px]
+    drop-shadow-xl
+    font-['Anton',sans-serif]
+    font-bold
+    tracking-tight
+    px-2
+  "
+>
+  DELIVERING YOUR <br />
+  CARGO <br />
+  WORLDWIDE
+</h1>
+
 
       {/* ✔ SIMPLE CAL-SANS STYLE BUTTON */}
       <button
@@ -85,19 +92,27 @@ export default function Home() {
   <div className="flex md:hidden flex-col items-center text-center relative z-20 px-6 pt-[480px] pb-12">
 
     {/* ✔ ANTON MOBILE HEADING */}
-    <h1
-      className="
-        text-white font-['Anton',sans-serif]
-        leading-[1.1]
-        text-[42px]
-        drop-shadow-xl
-        opacity-75
-      "
-    >
-      DELIVERING YOUR <br />
-      CARGO <br />
-      WORLDWIDE
-    </h1>
+<h1
+  className="
+    text-transparent
+    bg-clip-text
+    bg-gradient-to-r
+    from-[#E7EBEE]
+    via-[#E7EBEE]
+    to-[#C6D6DB]
+    leading-[1.1]
+    text-[42px]
+    drop-shadow-xl
+    font-['Anton',sans-serif]
+    font-bold
+    tracking-tight
+  "
+>
+  DELIVERING YOUR <br />
+  CARGO <br />
+  WORLDWIDE
+</h1>
+
 
     {/* ✔ BUTTON SAME STYLE */}
     <button
@@ -132,17 +147,13 @@ export default function Home() {
       </section>
 <TextBand />
       {/* ======================= WHY CHOOSE ======================= */}
-      <section id="whychoose" className=" mx-auto px-6 py-8">
+      <section id="whychoose" className=" mx-auto px-6 py-3">
         <WhyChoose />
       </section>
 
-      {/* ======================= TESTIMONIAL =======================
-      <section id="testimonial" className="container mx-auto px-6 py-8">
-        <Testimonial />
-      </section> */}
 
       {/* ======================= EXPERT CTA ======================= */}
-      <section id="expert" className="mx-auto px-6 py-12">
+      <section id="expert" className="mx-auto px-6 py-8">
         <ExpertCTA />
       </section>
 

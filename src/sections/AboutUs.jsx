@@ -3,7 +3,7 @@ import React from "react";
 export default function AboutUs() {
   return (
     <section className="px-6 py-12 lg:py-20 section-animate">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-auto">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -17,7 +17,7 @@ export default function AboutUs() {
                 font-semibold
                 tracking-tight
                 text-[color:var(--brand-600)]
-                mb-5
+                mb-8
                 font-['Cal Sans',_sans-serif]
               "
             >
@@ -37,16 +37,13 @@ export default function AboutUs() {
                 text-justify
               "
             >
-              Well Reach Logistics offers cost-effective, reliable international
-              freight solutions through a strong global network and trusted
-              partnerships.
+Well Reach Logistics began its journey in 2015 in India, with a small but determined team focused on
+ solving real-world logistics challenges for local businesses. What started as a single office has grown into multiple locations in Kerala, Karnataka and overseas office in the Kingdom of Bahrain, operations serving clients across the GCC and beyond.
+
               <br /><br />
-              We specialize in air, ocean, and international courier services,
-              ensuring fast, secure, and flexible shipping worldwide.
-              <br /><br />
-              With real-time tracking, proof of delivery, and Email/SMS updates,
-              we guarantee on-time, door-to-door delivery with complete
-              transparency and trust.
+              Well Reach Logistics is a full-service logistics partner offering integrated solutions across air, ocean, road, warehousing, and value-added services for both domestic and international movements. Our teams in India and Bahrain work as a single unit, designing tailored logistics strategies that support
+industries ranging from manufacturing and engineering to events, exhibitions, and retail. Through strategic relationships with global carriers, airlines, and express integrators, we combine competitive pricing with reliable capacity, ensuring your cargo reaches the right place, at the right
+time, in the right condition.
             </p>
           </div>
 
@@ -54,7 +51,7 @@ export default function AboutUs() {
           <div className="hidden lg:grid grid-cols-2 gap-6">
             
             {/* Big image */}
-            <div className="row-span-2 rounded-2xl overflow-hidden card-shadow">
+            <div className="row-span-2 rounded-2xl overflow-hidden card-shadow h-140">
               <img
                 src="./about-ship.png"
                 alt="Container Ship"
@@ -63,7 +60,7 @@ export default function AboutUs() {
             </div>
 
             {/* Top small image */}
-            <div className="rounded-2xl overflow-hidden card-shadow">
+            <div className="rounded-2xl overflow-hidden card-shadow h-66" >
               <img
                 src="./about-warehouse.png"
                 alt="Warehouse"
@@ -72,7 +69,7 @@ export default function AboutUs() {
             </div>
 
             {/* Bottom small image */}
-            <div className="rounded-2xl overflow-hidden card-shadow">
+            <div className="rounded-2xl overflow-hidden card-shadow h-66">
               <img
                 src="./about-inspection.png"
                 alt="Container Inspection"
