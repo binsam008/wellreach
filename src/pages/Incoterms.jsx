@@ -48,9 +48,18 @@ export default function Incoterms() {
 
   return (
     <>
-      {/* MAIN CONTENT */}
       <div className="px-4 md:px-10 py-20 max-w-7xl mx-auto">
-        <h1 className="text-center text-3xl md:text-4xl font-bold text-[#4A46C6] mb-4">
+
+        {/* LOGO */}
+        <div className="flex justify-center mb-6">
+          <img
+            src="/navlogo.png"
+            alt="Well Reach Logistics Logo"
+            className="h-16 w-auto object-contain"
+          />
+        </div>
+
+        <h1 className="text-center text-3xl md:text-4xl font-bold text-[#4A46C6] mb-6">
           INCOTERM CHART
         </h1>
 
@@ -174,7 +183,6 @@ export default function Incoterms() {
         </p>
       </div>
 
-      {/* FOOTER ADDED HERE */}
       <Footer />
     </>
   );
