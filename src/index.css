@@ -3,6 +3,7 @@
 ------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cal+Sans:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
 /* Tailwind v4 entry */
 @import "tailwindcss";
 
@@ -14,18 +15,15 @@
   --muted: #6b7280;
 }
 
-/* Full height layout */
 html, body, #root {
   height: 100%;
 }
 
-/* Body font = Inter */
 body {
   font-family: 'Inter';
   background: #F8FAFC;
 }
 
-/* Container helper */
 .container {
   max-width: 1160px;
   margin-left: auto;
@@ -39,7 +37,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cal Sans';
 }
 
-/* Optional: utility for JSX */
 .font-calsans {
   font-family: 'Cal Sans';
 }
@@ -47,75 +44,55 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------
    UI STYLING
 ------------------------------ */
-
-/* Card shadows */
 .card-shadow {
   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.12);
 }
 
-/* Accent pill */
 .accent-pill {
   background: linear-gradient(180deg, rgba(91,33,182,0.12), rgba(91,33,182,0.04));
   border-radius: 16px;
 }
 
-/* Floating side glass effect */
 .float-side {
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
   border-radius: 9999px;
   padding: 6px;
   box-shadow: 0 6px 18px rgba(2,6,23,0.12);
 }
 
-/* Placeholder image style */
 img[alt="placeholder"] {
   opacity: 0.9;
 }
 
 /* ------------------------------
-   ANIMATIONS
+   GENERAL ANIMATIONS
 ------------------------------ */
 
-/* Blinking cursor */
 @keyframes blink {
-  0% { opacity: 1; }
+  0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-  100% { opacity: 1; }
 }
-.animate-blink {
-  animation: blink 1s infinite;
-}
+.animate-blink { animation: blink 1s infinite; }
 
-/* Subtitle fade-up animation */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-up {
-  animation: fadeUp 0.8s ease-out both;
-}
+.animate-fade-up { animation: fadeUp 0.8s ease-out both; }
 
-/* Section entrance fade/slide */
 @keyframes sectionIn {
   from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.section-animate {
-  animation: sectionIn 800ms cubic-bezier(.2,.9,.3,1) both;
-}
+.section-animate { animation: sectionIn 800ms cubic-bezier(.2,.9,.3,1) both; }
 
-/* Slide-in from left */
 @keyframes slide-right {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
 }
-.animate-slide-right {
-  animation: slide-right 0.35s ease-out;
-}
+.animate-slide-right { animation: slide-right 0.35s ease-out; }
 
-/* Shimmer skeleton loading */
 @keyframes shimmer {
   0% { background-position: 200% 0 }
   100% { background-position: -200% 0 }
@@ -126,60 +103,74 @@ img[alt="placeholder"] {
   animation: shimmer 1.2s linear infinite;
 }
 
-/* Auto-moving text strip */
-@keyframes band-text-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.band-text-track {
-  animation: band-text-scroll linear infinite;
-}
-
-/* Buttons focus highlight */
-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(107,33,168,0.12);
-}
-.text-justify {
-  text-align: justify;
-}
-.band-track {
-  animation: bandScroll linear infinite;
-}
-
 @keyframes bandScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
 }
+.band-track { animation: bandScroll linear infinite; }
+
 @keyframes slowSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
 }
-.animate-slowSpin {
-  animation: slowSpin 6s linear infinite;
-}
+.animate-slowSpin { animation: slowSpin 6s linear infinite; }
 
 @keyframes upDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-18px); }
 }
-.animate-upDown {
-  animation: upDown 3s ease-in-out infinite;
-}
+.animate-upDown { animation: upDown 3s ease-in-out infinite; }
 
 @keyframes textloop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.33%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.33%); }
+}
+.animate-textloop { animation: textloop linear infinite; }
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107,33,168,0.12);
 }
 
-.animate-textloop {
-  animation: textloop linear infinite;
+.text-justify { text-align: justify; }
+
+/* ------------------------------
+   LOADER ANIMATIONS (NEW + CLEAN)
+------------------------------ */
+
+/* Liquid Wave movement */
+@keyframes waveMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200px); }
+}
+.liquid-wave {
+  animation: waveMove 2.8s ease-in-out infinite;
+}
+
+/* Wheel Spin */
+@keyframes wheelSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.wheel-rotate {
+  animation: wheelSpin 1s linear infinite;
+}
+
+/* Truck Drive Away */
+@keyframes truckDrive {
+  0% { transform: translateX(0) scale(1); }
+  30% { transform: translateX(40px) scale(1.03); }
+  100% { transform: translateX(550px) scale(1); opacity: 0; }
+}
+.drive-away {
+  animation: truckDrive 1.8s ease-in-out forwards;
+}
+
+/* Fade Out Loader */
+@keyframes loaderFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.fade-out {
+  animation: loaderFadeOut 0.8s ease-out forwards;
 }

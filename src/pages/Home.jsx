@@ -57,11 +57,11 @@ export default function Home() {
     via-[#E7EBEE]
     to-[#C6D6DB]
     leading-none
-    text-[110px]
+    text-[60px] md:text-[90px] lg:text-[110px]
     drop-shadow-xl
     font-['Anton']
-    font-bold
-    
+    font-semibold
+    tracking-[0.03em]
     px-2
   "
 >
@@ -69,6 +69,7 @@ export default function Home() {
   CARGO <br />
   WORLDWIDE
 </h1>
+
 
 
       {/* ✔ SIMPLE CAL-SANS STYLE BUTTON */}

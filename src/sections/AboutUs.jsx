@@ -25,18 +25,21 @@ export default function AboutUs() {
             </h2>
 
             {/* Paragraph Body (Inter look) */}
-            <p
-              className="
-                text-slate-700
-                text-[16px]
-                sm:text-[17px]
-                leading-[28px]
-                sm:leading-[30px]
-                font-[Inter,sans-serif]
-                space-y-4
-                text-justify
-              "
-            >
+          <p
+  className="
+    text-slate-700
+    text-[16px]
+    sm:text-[17px]
+    leading-[28px]
+    sm:leading-[30px]
+    font-[Inter,sans-serif]
+    space-y-4
+
+    text-center       /* mobile */
+    lg:text-justify   /* desktop */
+  "
+>
+
 Well Reach Logistics began its journey in 2015 in India, with a small but determined team focused on
  solving real-world logistics challenges for local businesses. What started as a single office has grown into multiple locations in Kerala, Karnataka and overseas office in the Kingdom of Bahrain, operations serving clients across the GCC and beyond.
 

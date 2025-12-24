@@ -4,7 +4,7 @@ import Footer from "../sections/Footer";
 export default function About() {
   return (
     <>
-      <div className="container px-6 py-25">
+      <div className="container px-8 py-25">
 
         {/* ABOUT US */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start mb-20">
@@ -36,9 +36,9 @@ export default function About() {
           {/* IMAGE */}
           <div>
             <img
-              src="/about-image.png"
+              src="/about-image.jpg"
               alt="Container Port"
-              className="w-5xl h-160 rounded-2xl shadow-lg object-cover"
+              className="w-5xl h-140 rounded-2xl shadow-lg object-cover"
             />
           </div>
         </div>
@@ -49,9 +49,9 @@ export default function About() {
           {/* LEFT IMAGE */}
           <div>
             <img
-              src="/vision-worker.png"
+              src="/vision-worker.jpg"
               alt="Worker Vision"
-              className="rounded-2xl shadow-lg w-full object-cover"
+              className="rounded-2xl shadow-lg w-5xl h-120 object-cover"
             />
           </div>
 
@@ -79,17 +79,17 @@ export default function About() {
         </div>
 
         {/* LEADERSHIP */}
-        <div className="text-center mb-8">
+        {/* <div className="text-center mb-8">
           <h2 className="text-[28px] font-semibold text-[color:var(--brand-600)] font-['Cal Sans',sans-serif]">
             Our Leadership
           </h2>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center mb-20">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center mb-20">
           <div className="w-40 h-40 bg-gray-500 rounded-xl"></div>
           <div className="w-40 h-40 bg-gray-500 rounded-xl"></div>
           <div className="w-40 h-40 bg-gray-500 rounded-xl"></div>
-        </div>
+        </div> */}
       </div>
 
       {/* FIXED FOOTER */}

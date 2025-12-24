@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import Footer from "../sections/Footer";
 
 export default function Services() {
   const services = [
@@ -36,22 +37,25 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-25 px-6 md:px-12 max-w-7xl mx-auto text-center">
-      {/* HEADING */}
-      <h1 className="text-3xl md:text-4xl font-bold text-[#4A46C6]">
-        Shipping & Logistics <br /> Services
-      </h1>
+    <>
+      <section className="py-25 px-6 md:px-12 max-w-8xl mx-auto text-center">
+        {/* HEADING */}
+        <h1 className="text-3xl md:text-4xl font-bold text-[#4A46C6]">
+          Shipping & Logistics <br /> Services
+        </h1>
 
-      {/* GRID */}
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {services.map((s, i) => (
-          <HoverCard key={i} {...s} />
-        ))}
-      </div>
-    </section>
+        {/* GRID */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {services.map((s, i) => (
+            <HoverCard key={i} {...s} />
+          ))}
+        </div>
+      </section>
+
+      <Footer />
+    </>
   );
 }
-
 
 // ⭐ FINAL COMBINED CARD COMPONENT
 function HoverCard({ title, img, desc }) {
@@ -77,24 +81,7 @@ function HoverCard({ title, img, desc }) {
         "
       />
 
-      {/* ALWAYS VISIBLE TITLE + ARROW */}
-      {/* <div className="absolute bottom-3 left-4">
-        <span className="text-white text-lg font-semibold drop-shadow-lg">
-          {title}
-        </span>
-      </div>
-
-      <div
-        className="
-          absolute bottom-3 right-4 
-          bg-white/80 backdrop-blur p-1.5 rounded-full
-          group-hover:bg-white transition
-        "
-      >
-        <ArrowRight size={20} className="text-black" />
-      </div> */}
-
-      {/* HOVER / CLICK OVERLAY WITH DESCRIPTION */}
+      {/* HOVER / CLICK OVERLAY */}
       <div
         className={`
           absolute inset-0 bg-purple-800 text-white 

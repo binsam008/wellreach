@@ -1,44 +1,66 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Incoterms from "./pages/Incoterms";
+import Navbar from "./components/Navbar";
+import TruckLoader from "./components/TruckLoader";
 
-// UI components
-import Navbar from "./components/Navbar"; // top bar (has the hamburger)
-// import Sidebar from "./components/Sidebar"; // sliding sidebar used for mobile overlay
-import SidebarFloating from "./components/SidebarFloating"; // fixed vertical icon bar (desktop)
+// Lazy-loaded pages
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Incoterms = lazy(() => import("./pages/Incoterms"));
 
 export default function App() {
-  const [open, setOpen] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
+  // SLOW, SMOOTH PROGRESS FILL
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) return 100;
+        return prev + 0.4;  // ⬅ Smooth slow loading
+      });
+    }, 120);
+
+    if (progress >= 100) {
+      clearInterval(interval);
+
+      // Wait for truck to finish driving animation
+      setTimeout(() => {
+        setLoaded(true);
+      }, 1600);
+    }
+
+    return () => clearInterval(interval);
+  }, [progress]);
+
+  // ⛔ SHOW LOADING SCREEN UNTIL FINISHED
+  if (!loaded) {
+    return (
+      <div className={progress >= 100 ? "fade-out" : ""}>
+        <TruckLoader progress={progress} />
+      </div>
+    );
+  }
+
+  // MAIN WEBSITE
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50 text-slate-800 relative">
-        {/* Top navigation (shows logo + hamburger) */}
-        <Navbar onOpen={() => setOpen(true)} />
+      <Navbar />
 
-        {/* Mobile sliding sidebar (overlay). Sidebar component expects `open` and `onClose`
-        <Sidebar open={open} onClose={() => setOpen(false)} /> */}
-
-        {/* Floating vertical icon bar for desktop */}
-        {/* <SidebarFloating /> */}
-
-        {/* Page content */}
-        <main className="pt-0">
+      <main className="pt-0">
+        <Suspense fallback={<TruckLoader progress={80} />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/incoterms" element={<Incoterms />} />
-
           </Routes>
-        </main>
-      </div>
+        </Suspense>
+      </main>
     </BrowserRouter>
   );
 }
