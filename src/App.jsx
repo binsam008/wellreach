@@ -20,7 +20,7 @@ export default function App() {
     const interval = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) return 100;
-        return prev + 0.4;  // ⬅ Smooth slow loading
+        return prev + 1.5;  // ⬅ Smooth slow loading
       });
     }, 120);
 
@@ -51,7 +51,7 @@ export default function App() {
       <Navbar />
 
       <main className="pt-0">
-        <Suspense fallback={<TruckLoader progress={80} />}>
+        
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
@@ -59,7 +59,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/incoterms" element={<Incoterms />} />
           </Routes>
-        </Suspense>
+        
       </main>
     </BrowserRouter>
   );

@@ -11,7 +11,6 @@ const SERVICES = [
   { id: "excess-baggage", title: "Excess Baggage", img: "/services/excess.jpg" },
   { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/ata.jpg" },
   { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/warehouse1.jpg" },
-  { id: "warehouse-management-2", title: "Warehouse Management", img: "/services/warehouse2.jpg" },
   { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/insurance.jpg" },
   { id: "cargos", title: "Cargos", img: "/services/cargo.jpg" },
 ];
