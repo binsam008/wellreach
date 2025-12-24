@@ -53,7 +53,7 @@ export default function Incoterms() {
         {/* LOGO */}
         <div className="flex justify-center mb-6">
           <img
-            src="/navlogo.png"
+            src="/nav1.png"
             alt="Well Reach Logistics Logo"
             className="h-16 w-auto object-contain"
           />
