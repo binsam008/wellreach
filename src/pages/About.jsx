@@ -15,7 +15,7 @@ export default function About() {
               About Us
             </h1>
 
-            <p className="text-slate-700 leading-[28px] text-[16px] font-[Inter,sans-serif] text-justify">
+            <p className="text-slate-700 leading-[28px] text-[16px] font-[Inter,sans-serif] text-left">
               Well Reach Logistics began its journey in 2015 in India, with a small but determined team
               focused on solving real-world logistics challenges for local businesses. What started as a
               single office has grown into multiple locations in Kerala, Karnataka, and an overseas office
@@ -61,7 +61,7 @@ export default function About() {
               Vision & Mission
             </h2>
 
-            <p className="text-slate-700 leading-[28px] text-[16px] font-[Inter,sans-serif] text-justify">
+            <p className="text-slate-700 leading-[28px] text-[16px] font-[Inter,sans-serif] text-left">
               Our mission is to make logistics effortless and dependable by providing seamless,
               end-to-end transportation solutions across the globe. We are committed to delivering every
               shipment with trust, transparency, and on-time performance, while offering personalized,
