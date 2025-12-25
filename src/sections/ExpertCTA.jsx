@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function ExpertCTA() {
   return (
     <section className="px-4 sm:px-6 section-animate">
-      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl min-h-[450px]">
+      <div className="relative max-w-8xl mx-auto overflow-hidden rounded-3xl min-h-[450px]">
 
         {/* RESPONSIVE BACKGROUND IMAGE */}
         <picture>

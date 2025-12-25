@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -14,7 +13,7 @@ export default function Navbar() {
   // Close mobile menu on route change
   useEffect(() => setIsOpen(false), [location.pathname]);
 
-  // Detect scroll for HOME page only
+  // Scroll detection (HOME only)
   useEffect(() => {
     const onScroll = () => {
       if (isHome) {
@@ -25,78 +24,75 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
-  // Nav links
   const navItems = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
     { name: "Services", to: "/services" },
     { name: "Contact", to: "/contact" },
     { name: "Incoterms", to: "/incoterms" },
-
   ];
 
-  const navVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -20 },
-  };
+  // 🔑 LOGO LOGIC
+  const logoSrc =
+    isHome && !scrolled ? "/navlogo.png" : "/nav1.png";
 
   return (
     <motion.nav
-      initial="visible"
-      animate={hidden ? "hidden" : "visible"}
-      variants={navVariants}
+      initial={{ opacity: 1, y: 0 }}
       className="fixed left-0 right-0 top-0 z-50"
     >
-      {/* TOP NAVBAR BACKGROUND LOGIC */}
+      {/* NAVBAR BACKGROUND */}
       <div
         className={`
-          transition-all duration-300 
+          transition-all duration-300
           ${
             isHome
               ? scrolled
-                ? "backdrop-blur-md bg-blue-600/30 shadow-md"
+                ? "backdrop-blur-md bg-white/80 shadow-md"
                 : "bg-transparent"
-              : "bg-gray-600/30 shadow-md"
+              : "bg-white shadow-md"
           }
         `}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 relative">
           <div className="flex items-center justify-between h-20">
 
-            {/* Logo Left */}
+            {/* LOGO */}
             <Link to="/" className="flex items-center">
               <img
-                src="/nav1.png"
-                alt="Logo"
-                className="h-12 w-auto"
+                src={logoSrc}
+                alt="Well Reach Logistics"
+                className="h-12 w-auto transition-all duration-300"
               />
             </Link>
 
-            {/* Centered Desktop Links */}
+            {/* DESKTOP NAV */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 space-x-10">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.to}
-                  className="
-                    text-white 
-                    font-semibold 
-                    tracking-wide 
-                    text-sm 
-                    uppercase
-                    transition 
-                    hover:text-purple-900
-                  "
+                  className={`
+                    font-semibold text-sm uppercase tracking-wide transition
+                    ${
+                      isHome && !scrolled
+                        ? "text-white hover:text-purple-300"
+                        : "text-gray-800 hover:text-[#5154B6]"
+                    }
+                  `}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* MOBILE BUTTON */}
             <button
               onClick={() => setIsOpen(true)}
-              className="md:hidden p-2 rounded-md text-white"
+              className={`
+                md:hidden p-2 rounded-md transition
+                ${isHome && !scrolled ? "text-white" : "text-gray-900"}
+              `}
             >
               <Menu size={28} />
             </button>
@@ -104,7 +100,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* MOBILE SIDEBAR */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -116,7 +112,7 @@ export default function Navbar() {
           >
             <div className="rounded-r-2xl w-72 h-full bg-white shadow-xl p-6 flex flex-col">
               <div className="flex items-center justify-between mb-6">
-                <img src="/navlogo.png" className="h-10" alt="Logo" />
+                <img src="/nav-logo.png" className="h-10" alt="Logo" />
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md bg-gray-200"
@@ -125,7 +121,6 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Mobile Nav Items */}
               <nav className="space-y-5 text-gray-900 font-medium">
                 {navItems.map((item) => (
                   <Link

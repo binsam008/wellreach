@@ -164,7 +164,7 @@ export default function Contact() {
       <section className="px-6 md:px-12 py-20 max-w-7xl mx-auto">
 
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-purple-700 mb-3">
+          <h2 className="text-4xl font-bold text-[#4A46C6] mb-3">
             Contact Us
           </h2>
           <p className="text-gray-600 max-w-lg mx-auto">
@@ -183,7 +183,7 @@ export default function Contact() {
               shadow-xl rounded-2xl p-8 space-y-6
             "
           >
-            <h3 className="text-xl font-semibold text-purple-700 mb-2">
+            <h3 className="text-xl font-semibold text-[#4A46C6] mb-2">
               Send us a Message
             </h3>
 

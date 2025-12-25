@@ -12,17 +12,20 @@ export default function AboutUs() {
 
             {/* Cal-Sans Heading */}
             <h2
-              className="
-                text-[32px]
-                font-semibold
-                tracking-tight
-                text-[color:var(--brand-600)]
-                mb-8
-                font-['Cal Sans',_sans-serif]
-              "
-            >
-              About Us
-            </h2>
+  className="
+    text-3xl
+    sm:text-4xl
+    md:text-5xl
+    font-semibold
+    tracking-tight
+    text-[color:var(--brand-600)]
+    mb-10
+    font-['Cal Sans',_sans-serif]
+  "
+>
+  About Us
+</h2>
+
 
             {/* Paragraph Body (Inter look) */}
           <p

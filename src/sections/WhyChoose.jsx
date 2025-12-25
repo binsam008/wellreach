@@ -67,10 +67,10 @@ const Card = ({ icon, title, body }) => (
 
   return (
     <section className="px-6 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-14 text-[color:var(--brand-600)]">
+        <h2 className="text-center text-4xl lg:text-4xl font-semibold mb-14 text-[color:var(--brand-600)]">
           Why Choose Us
         </h2>
 

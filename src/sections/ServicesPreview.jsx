@@ -2,17 +2,17 @@
 import React, { useState } from "react";
 
 const SERVICES = [
-  { id: "air-freight", title: "Air Freight", img: "/services/air.jpg" },
-  { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.jpg" },
-  { id: "international-courier", title: "International Courier", img: "/services/international-courier.jpg" },
-  { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/events.jpg" },
-  { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/dg.jpg" },
-  { id: "custom-clearance", title: "Custom Clearance", img: "/services/custom.jpg" },
-  { id: "excess-baggage", title: "Excess Baggage", img: "/services/excess.jpg" },
-  { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/ata.jpg" },
-  { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/warehouse1.jpg" },
-  { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/insurance.jpg" },
-  { id: "cargos", title: "Cargos", img: "/services/cargo.jpg" },
+  { id: "air-freight", title: "Air Freight", img: "/services/air.png" },
+  { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.png" },
+  { id: "international-courier", title: "International Courier", img: "/services/International Courier & Excess Baggage.png" },
+  { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/Events & Project Cargo.png" },
+  { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/Dangerous Goods (DG) Cargo.png" },
+  { id: "custom-clearance", title: "Custom Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
+  { id: "excess-baggage", title: "Excess Baggage", img: "/services/Excess.png" },
+  { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/Temperature-Controlled Cargo.png" },
+  { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
+  { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/Cargo Insurance.png" },
+  { id: "Land Transport", title: "Land Transport", img: "/services/Land Transportation.png" },
 ];
 
 
@@ -106,9 +106,21 @@ export default function ServicesPreview() {
 
   return (
     <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 className="text-center text-[20px] sm:text-2xl font-semibold text-[color:var(--brand-600)] mb-6">
-        Shipping & Logistics Services
-      </h2>
+      <h2
+  className="
+    text-center
+    text-3xl
+    sm:text-3xl
+    md:text-3xl
+    lg:text-4xl
+    font-bold
+    tracking-tight
+    text-[color:var(--brand-600)]
+    mb-12
+  "
+>
+  Shipping & Logistics Services
+</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {visible.map((s) => (
