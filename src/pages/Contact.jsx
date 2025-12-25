@@ -209,7 +209,7 @@ export default function Contact() {
             <BranchCard key={i} index={i} {...b} />
           ))}
 
-          <form className="bg-white shadow-lg rounded-2xl p-6 space-y-5">
+          <form className="bg-white shadow-lg rounded-1xl p-6 space-y-5">
             <input type="text" placeholder="Name" className="input-field" />
             <input type="email" placeholder="Email" className="input-field" />
             <input type="text" placeholder="Subject" className="input-field" />
