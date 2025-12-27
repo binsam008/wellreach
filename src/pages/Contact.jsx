@@ -54,9 +54,9 @@ export default function Contact() {
         ),
         maps: "https://maps.google.com/?q=Sapthagiri+Layout,+Maruthi+Nagar,+Bengaluru",
         email: "varun@wellreachlogistics.com",
-        phone: "+91 96328 49502",
+        phone: "+91 87140 02443",
       },
-      whatsapp: "+919632849502",
+      whatsapp: "+918714002443",
     },
 
     {

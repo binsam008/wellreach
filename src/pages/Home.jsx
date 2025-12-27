@@ -73,7 +73,7 @@ export default function Home() {
 
 
       {/* ✔ SIMPLE CAL-SANS STYLE BUTTON */}
-      <button
+      {/* <button
         className="
           mt-10 px-10 py-4 rounded-full 
           bg-white text-[color:var(--brand-600)]
@@ -84,7 +84,7 @@ export default function Home() {
       >
         Explore what we do
         <span className="text-xl">▶</span>
-      </button>
+      </button> */}
 
     </div>
   </div>
@@ -116,7 +116,7 @@ export default function Home() {
 
 
     {/* ✔ BUTTON SAME STYLE */}
-    <button
+    {/* <button
       className="
         mt-6 px-8 py-3 rounded-full 
         bg-white text-[color:var(--brand-600)]
@@ -127,7 +127,7 @@ export default function Home() {
     >
       Explore what we do
       <span className="text-xl">▶</span>
-    </button>
+    </button> */}
 
   </div>
 
