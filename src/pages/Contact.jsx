@@ -47,9 +47,7 @@ export default function Contact() {
       body: {
         address: (
           <>
-            1st Floor, Building No. 7, Horse Dynasty,
-            1st Cross, Sapthagiri Layout, Maruthi Nagar,
-            Bengaluru – 560064
+            2nd Floor, 368, Amruthahalli Main Road, Jakkur Layout, Bengaluru, Karnataka, 560092
           </>
         ),
         maps: "https://maps.google.com/?q=Sapthagiri+Layout,+Maruthi+Nagar,+Bengaluru",

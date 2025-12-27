@@ -95,24 +95,23 @@ export default function Home() {
     {/* ✔ ANTON MOBILE HEADING */}
 <h1
   className="
-    text-transparent
-    bg-clip-text
-    bg-gradient-to-r
-    from-[#E7EBEE]
-    via-[#E7EBEE]
-    to-[#C6D6DB]
-    leading-[1.1]
+    text-white
+    leading-[1.05]
     text-[42px]
-    drop-shadow-xl
+    sm:text-[52px]
+    lg:text-[68px]
     font-['Anton',sans-serif]
     font-bold
     tracking-tight
+    max-w-[520px]
   "
 >
-  DELIVERING YOUR <br />
-  CARGO <br />
+  DELIVERING <br />
+  YOUR CARGO <br />
   WORLDWIDE
 </h1>
+
+
 
 
     {/* ✔ BUTTON SAME STYLE */}
