@@ -3,13 +3,18 @@ import { MessageCircle, Mail, Phone, User, MapPin, Copy } from "lucide-react";
 import Footer from "../sections/Footer";
 
 export default function Contact() {
+
   const branches = [
     {
       title: "Head Office – Calicut",
       head: "Krishna Raj P S",
       body: {
-        address:
-          "2/2288, Peringatt Building, Opp. Civil Station, Calicut, Kerala, India – 673020",
+        address: (
+          <>
+            2/2288, Peringatt Building, Opp. Civil Station,
+            Calicut, Kerala, India – 673020
+          </>
+        ),
         maps: "https://maps.google.com/?q=Peringatt+Building,+Civil+Station,+Calicut",
         email: "krishna@wellreachlogistics.com",
         phone: "+91 99021 85610",
@@ -17,37 +22,55 @@ export default function Contact() {
       whatsapp: "+919902185610",
       highlight: true,
     },
+
     {
       title: "Cochin",
       head: "Visakh P V",
       body: {
-        address:
-          "CC 28/447, Club Road, Giri Nagar, Kadavanthara, Cochin, Kerala, India – 682020",
-        maps: "https://maps.google.com/?q=Club+Road,+Giri+Nagar,+Cochin",
+        address: (
+          <>
+            CC 28/447, Club Road,{" "}
+            <span className="whitespace-nowrap">Giri Nagar</span>, Kadavanthara,
+            Cochin, Kerala, India – 682020
+          </>
+        ),
+        maps: "https://maps.google.com/?q=Giri+Nagar,+Kadavanthara,+Cochin",
         email: "visakh@wellreachlogistics.com",
         phone: "+91 81370 15484",
       },
       whatsapp: "+918137015484",
     },
+
     {
       title: "Bangalore",
       head: "Varun Dev P V",
       body: {
-        address:
-          "1st Floor, Building No. 7, Horse Dynasty, 1st Cross, Sapthagiri Layout, Maruthi Nagar, Bengaluru – 560064",
+        address: (
+          <>
+            1st Floor, Building No. 7, Horse Dynasty,
+            1st Cross, Sapthagiri Layout, Maruthi Nagar,
+            Bengaluru – 560064
+          </>
+        ),
         maps: "https://maps.google.com/?q=Sapthagiri+Layout,+Maruthi+Nagar,+Bengaluru",
         email: "varun@wellreachlogistics.com",
         phone: "+91 96328 49502",
       },
       whatsapp: "+919632849502",
     },
+
     {
       title: "Bahrain – Overseas Office",
       head: "Sajid Moosa",
       body: {
-        address:
-          "#206, Building 85, Finteer Center Road 1802, Hoora, Kingdom of Bahrain ",
-        maps: "https://maps.google.com/?q=Peringatt+Building,+Civil+Station,+Calicut",
+        address: (
+          <>
+            #206, Building 85,{" "}
+            <span className="whitespace-nowrap">Finteer Center</span>{" "}
+            Road 1802, Hoora, Kingdom of Bahrain
+          </>
+        ),
+        maps: "https://maps.google.com/?q=Hoora+Bahrain",
         email: "sajid@wellreachlogistics.com",
         phone: "+973 3313 3858",
       },
@@ -74,16 +97,11 @@ export default function Contact() {
         <div
           className={`
             bg-[#4A46C6] text-white px-6 py-3 flex items-center justify-between
-            ${
-              isLeft
-                ? "rounded-tl-[18px] rounded-tr-[60px]"
-                : "rounded-tl-[60px] rounded-tr-[18px]"
-            }
+            ${isLeft ? "rounded-tl-[18px] rounded-tr-[60px]" : "rounded-tl-[60px] rounded-tr-[18px]"}
           `}
         >
           <h3 className="text-[15px] font-semibold">{title}</h3>
 
-          {/* WhatsApp */}
           <a
             href={`https://wa.me/${whatsapp}`}
             target="_blank"
@@ -98,37 +116,30 @@ export default function Contact() {
         <div className="p-5 text-sm space-y-4 text-gray-700">
 
           {/* Branch Head */}
-          <div className="flex items-start gap-2 text-gray-900 font-medium">
+          <div className="flex items-start gap-2 font-medium text-gray-900">
             <User size={18} className="text-purple-700 min-w-[18px]" />
             <span>Branch Head: {head}</span>
           </div>
 
-          {/* Address + Maps */}
+          {/* Address */}
           <div className="flex items-start gap-2">
-            <MapPin size={18} className="text-purple-700 min-w-[18px]" />
-            <div>
-              <a
-                href={body.maps}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-700 transition"
-              >
-                {body.address}
-              </a>
-            </div>
+            <MapPin size={18} className="text-purple-700 min-w-[18px] mt-1" />
+            <a
+              href={body.maps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-left leading-relaxed hover:text-purple-700 transition"
+            >
+              {body.address}
+            </a>
           </div>
 
           {/* Email */}
           <div className="flex items-center gap-2">
             <Mail size={18} className="text-purple-700 min-w-[18px]" />
-            <a
-              href={`mailto:${body.email}`}
-              className="hover:text-purple-700 transition"
-            >
+            <a href={`mailto:${body.email}`} className="hover:text-purple-700 transition">
               {body.email}
             </a>
-
-            {/* Copy Icon */}
             <Copy
               size={16}
               className="ml-2 text-gray-400 hover:text-purple-700 cursor-pointer"
@@ -139,14 +150,9 @@ export default function Contact() {
           {/* Phone */}
           <div className="flex items-center gap-2">
             <Phone size={18} className="text-purple-700 min-w-[18px]" />
-            <a
-              href={`tel:${body.phone}`}
-              className="hover:text-purple-700 transition"
-            >
+            <a href={`tel:${body.phone}`} className="hover:text-purple-700 transition">
               {body.phone}
             </a>
-
-            {/* Copy Icon */}
             <Copy
               size={16}
               className="ml-2 text-gray-400 hover:text-purple-700 cursor-pointer"
@@ -177,13 +183,8 @@ export default function Contact() {
         <div className="hidden lg:grid grid-cols-2 gap-14">
 
           {/* Form */}
-          <form
-            className="
-              backdrop-blur-lg bg-white/70 border border-purple-100
-              shadow-xl rounded-2xl p-8 space-y-6
-            "
-          >
-            <h3 className="text-xl font-semibold text-[#4A46C6] mb-2">
+          <form className="bg-white/70 backdrop-blur-lg border border-purple-100 shadow-xl rounded-2xl p-8 space-y-6">
+            <h3 className="text-xl font-semibold text-[#4A46C6]">
               Send us a Message
             </h3>
 
@@ -209,7 +210,7 @@ export default function Contact() {
             <BranchCard key={i} index={i} {...b} />
           ))}
 
-          <form className="bg-white shadow-lg rounded-1xl p-6 space-y-5">
+          <form className="bg-white shadow-lg rounded-xl p-6 space-y-5">
             <input type="text" placeholder="Name" className="input-field" />
             <input type="email" placeholder="Email" className="input-field" />
             <input type="text" placeholder="Subject" className="input-field" />

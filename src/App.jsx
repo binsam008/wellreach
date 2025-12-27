@@ -1,15 +1,14 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import TruckLoader from "./components/TruckLoader";
 
-// Lazy-loaded pages
-const Home = lazy(() => import("./pages/Home"));
-const Services = lazy(() => import("./pages/Services"));
-const About = lazy(() => import("./pages/About"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Incoterms = lazy(() => import("./pages/Incoterms"));
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Incoterms from "./pages/Incoterms";
 
 export default function App() {
   const [progress, setProgress] = useState(0);

@@ -112,7 +112,7 @@ export default function Navbar() {
           >
             <div className="rounded-r-2xl w-72 h-full bg-white shadow-xl p-6 flex flex-col">
               <div className="flex items-center justify-between mb-6">
-                <img src="/nav-logo.png" className="h-10" alt="Logo" />
+                <img src="/nav1.png" className="h-10" alt="Logo" />
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md bg-gray-200"

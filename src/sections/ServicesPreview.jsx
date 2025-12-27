@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 
 const SERVICES = [
-  { id: "air-freight", title: "Air Freight", img: "/services/air.png" },
+  { id: "air-freight", title: "Air Freight", img: "/services/2.png" },
   { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.png" },
-  { id: "international-courier", title: "International Courier", img: "/services/International Courier & Excess Baggage.png" },
+  { id: "international-courier", title: "International Courier", img: "/services/3.png" },
   { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/Events & Project Cargo.png" },
   { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/Dangerous Goods (DG) Cargo.png" },
   { id: "custom-clearance", title: "Custom Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
@@ -24,7 +24,7 @@ function ServiceCard({ s }) {
     <article className="relative rounded-2xl overflow-hidden bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       
       {/* IMAGE */}
-      <div className="w-full h-[220px] sm:h-[260px] md:h-[220px] lg:h-[240px] bg-slate-100 relative overflow-hidden">
+      <div className="w-full h-[220px] sm:h-[260px] md:h-[220px] lg:h-[280px] bg-slate-100 relative overflow-hidden">
         {!failed ? (
           <img
             src={s.img}
