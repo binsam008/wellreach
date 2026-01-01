@@ -83,6 +83,9 @@ export default function Footer() {
       <p className="text-center text-xs opacity-70 mt-4">
         © {new Date().getFullYear()} WellReach Logistics. All rights reserved.
       </p>
+      <p className="text-center text-xs opacity-70 mt-4">
+        Designed By Z-Tech Digital.
+      </p>
     </footer>
   );
 }
