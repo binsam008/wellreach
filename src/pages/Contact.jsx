@@ -70,9 +70,9 @@ export default function Contact() {
         ),
         maps: "https://maps.google.com/?q=Hoora+Bahrain",
         email: "sajid@wellreachlogistics.com",
-        phone: "+973 3313 3858",
+        phone: "+973 3311 3858",
       },
-      whatsapp: "+97333133858",
+      whatsapp: "+97333113858",
     },
   ];
 
