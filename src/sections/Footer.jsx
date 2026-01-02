@@ -55,21 +55,21 @@ export default function Footer() {
 
         <h3 className="font-semibold mb-2 text-[#ffffff]">Services Provided</h3>
         <ul className="text-sm space-y-1 mb-6">
-          <li><a href="/air-freight" className="hover:underline">Air Freight</a></li>
-          <li><a href="/ocean-freight" className="hover:underline">Ocean Freight</a></li>
-          <li><a href="/international-courier" className="hover:underline">International Courier</a></li>
-          <li><a href="/project-cargo" className="hover:underline">Events & Project Cargo</a></li>
-          <li><a href="/custom-clearance" className="hover:underline">Custom Clearance</a></li>
-          <li><a href="/land-transportation" className="hover:underline">Land Transportation</a></li>
+            <li><a href="/#services" className="hover:underline">Air Freight</a></li>
+            <li><a href="/#services" className="hover:underline">Ocean Freight</a></li>
+            <li><a href="/#services" className="hover:underline">International Courier</a></li>
+            <li><a href="/#services" className="hover:underline">Events & Project Cargo</a></li>
+            <li><a href="/#services" className="hover:underline">Custom Clearance</a></li>
+            <li><a href="/#services" className="hover:underline">Land Transportation</a></li>
         </ul>
 
         <h3 className="font-semibold mb-2 text-[#ffffff]">Company</h3>
         <ul className="text-sm space-y-1 mb-6">
-          <li><a href="/about" className="hover:underline">About Us</a></li>
-          <li><a href="/gallery" className="hover:underline">Gallery</a></li>
-          <li><a href="/faqs" className="hover:underline">FAQs</a></li>
-          <li><a href="/career" className="hover:underline">Career</a></li>
-          <li><a href="/contact-us" className="hover:underline">Contact us</a></li>
+            <li><a href="/about" className="hover:underline">About Us</a></li>
+            <li><a href="/services" className="hover:underline">Services</a></li>
+            <li><a href="/incoterms" className="hover:underline">Incoterms</a></li>
+            <li><a href="/career" className="hover:underline">Career</a></li>
+            <li><a href="/contact" className="hover:underline">Contact us</a></li>
         </ul>
 
         <h3 className="font-semibold mb-3 text-[#ffffff]">Social Media</h3>
