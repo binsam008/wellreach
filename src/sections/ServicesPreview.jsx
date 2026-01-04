@@ -7,7 +7,7 @@ const SERVICES = [
   { id: "international-courier", title: "International Courier", img: "/services/3.png" },
   { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/Events & Project Cargo.png" },
   { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/Dangerous Goods (DG) Cargo.png" },
-  { id: "custom-clearance", title: "Custom Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
+  { id: "customs-clearance", title: "Customs Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
   { id: "excess-baggage", title: "Excess Baggage", img: "/services/Excess.png" },
   { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/Temperature-Controlled Cargo.png" },
   { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
