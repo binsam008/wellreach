@@ -21,7 +21,7 @@ export default function Footer() {
             <li><a href="/#services" className="hover:underline">Ocean Freight</a></li>
             <li><a href="/#services" className="hover:underline">International Courier</a></li>
             <li><a href="/#services" className="hover:underline">Events & Project Cargo</a></li>
-            <li><a href="/#services" className="hover:underline">Custom Clearance</a></li>
+            <li><a href="/#services" className="hover:underline">Customs Clearance</a></li>
             <li><a href="/#services" className="hover:underline">Land Transportation</a></li>
           </ul>
         </div>
