@@ -14,7 +14,7 @@ export default function Services() {
       desc: "Cost-effective global ocean freight for LCL, FCL, and breakbulk shipments.",
     },
     {
-      title: "Custom Clearance",
+      title: "Customs Clearance",
       img: "/service-page/custom.jpg",
       desc: "End-to-end customs documentation, inspection handling, and smooth clearance support.",
     },
