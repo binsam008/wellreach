@@ -33,7 +33,7 @@ export default function Footer() {
             <li><a href="/about" className="hover:underline">About Us</a></li>
             <li><a href="/services" className="hover:underline">Services</a></li>
             <li><a href="/incoterms" className="hover:underline">Incoterms</a></li>
-            <li><a href="/career" className="hover:underline">Career</a></li>
+            {/* <li><a href="/career" className="hover:underline">Career</a></li> */}
             <li><a href="/contact" className="hover:underline">Contact us</a></li>
           </ul>
         </div>
