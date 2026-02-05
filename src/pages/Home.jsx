@@ -23,8 +23,7 @@ export default function Home() {
       hidden md:block
       absolute inset-0
       w-full h-full
-      object-cover object-center
-      pointer-events-none
+      
     "
   />
 
@@ -57,11 +56,11 @@ export default function Home() {
     via-[#E7EBEE]
     to-[#C6D6DB]
     leading-none
-    text-[60px] md:text-[90px] lg:text-[110px]
+    text-[60px] md:text-[70px] lg:text-[80px]
     drop-shadow-xl
     font-['Anton']
     font-semibold
-    tracking-[0.03em]
+   py-30
     px-2
   "
 >
