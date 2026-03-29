@@ -8,6 +8,31 @@ export default function Portfolio() {
 
   if (!user) return <div className="p-20 text-center font-medium">User not found</div>;
 
+  // --- NEW: Function to generate and download the vCard ---
+  const handleSaveContact = () => {
+    // Constructing the vCard format
+    const vCardData = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      `FN:${user.name}`,
+      `TITLE:${user.role}`,
+      `TEL;TYPE=CELL:${user.phone}`,
+      user.social?.whatsapp ? `X-SOCIALPROFILE;TYPE=whatsapp:${user.social.whatsapp}` : "",
+      "END:VCARD"
+    ].filter(line => line !== "").join("\n");
+
+    // Create a blob and trigger download
+    const blob = new Blob([vCardData], { type: "text/vcard" });
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", `${user.slug}.vcf`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  };
+
   const initials = user.name
     .split(" ")
     .filter(Boolean)
@@ -17,17 +42,15 @@ export default function Portfolio() {
     .toUpperCase();
 
   return (
-    <div className="min-h-screen bg-[#F1F5F9] flex items-center justify-center p-8 md:p-8 font-sans">
-      <div className=" bg-white w-full max-w-9xl rounded-[2rem] shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col md:flex-row border border-white">
+    <div className="min-h-screen bg-[#F1F5F9] flex items-center justify-center p-4 md:p-8 font-sans">
+      <div className="bg-white w-full max-w-6xl rounded-[2rem] shadow-xl shadow-slate-200/60 overflow-hidden flex flex-col md:flex-row border border-white">
         
         {/* Sidebar: Profile & Socials */}
-        {/* Added extra top padding (pt-12) for mobile so the image doesn't touch the very top */}
-        <div className="md:w-80 bg-slate-50/80 border-r border-slate-100 p-8 pt-25 md:pt-8 flex flex-col">
+        <div className="md:w-80 bg-slate-50/80 border-r border-slate-100 p-8 pt-12 md:pt-8 flex flex-col">
           <div className="flex-1">
             
             {/* Avatar Section */}
             <div className="relative w-28 h-28 mb-6 mx-0">
-              {/* Outer Container for Shadow and Border */}
               <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#5154B6] to-[#3b3d8a] shadow-lg border-4 border-white overflow-hidden">
                 {user.profileImage ? (
                   <img 
@@ -44,8 +67,6 @@ export default function Portfolio() {
                   </div>
                 )}
               </div>
-              
-              {/* Online Status Dot - Added z-10 and adjusted position */}
               <div className="absolute -bottom-1 -right-1 z-10 bg-emerald-500 w-6 h-6 rounded-full border-4 border-white flex items-center justify-center shadow-sm">
                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
               </div>
@@ -58,7 +79,11 @@ export default function Portfolio() {
 
             {/* Main Action Buttons */}
             <nav className="space-y-2 mb-8">
-              <button className="w-full flex items-center gap-3 px-3 py-2.5 bg-white shadow-sm border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:border-indigo-500 transition-all">
+              {/* UPDATED BUTTON: Added onClick handler and active state styling */}
+              <button 
+                onClick={handleSaveContact}
+                className="w-full flex items-center gap-3 px-3 py-2.5 bg-white shadow-sm border border-slate-200 rounded-xl text-sm font-bold text-slate-700 hover:border-indigo-500 active:bg-slate-50 active:scale-95 transition-all"
+              >
                 <UserPlus size={16} className="text-indigo-500" />
                 Save Contact
               </button>
