@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import TruckLoader from "./components/TruckLoader";
+import Portfolio from "./portfolio/Portfolio"; // ✅ keep here
+import Footer from "./sections/Footer";
 
 // Lazy pages
 const Home = lazy(() => import("./pages/Home"));
@@ -16,13 +18,11 @@ export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // STEP 1: Smooth progress till 90%
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 90) {
           clearInterval(interval);
 
-          // STEP 2: Finish loading smoothly
           setTimeout(() => {
             setProgress(100);
 
@@ -49,12 +49,12 @@ export default function App() {
     );
   }
 
-  // Main app
+  // Main App
   return (
     <BrowserRouter>
       <Navbar />
 
-      <main className="pt-0">
+      <main>
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -62,8 +62,12 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/incoterms" element={<Incoterms />} />
+
+            {/* ✅ ADD HERE */}
+            <Route path="/portfolio/:slug" element={<Portfolio />} />
           </Routes>
         </Suspense>
+        <Footer/>
       </main>
     </BrowserRouter>
   );

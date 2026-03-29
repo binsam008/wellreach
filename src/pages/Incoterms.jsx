@@ -183,7 +183,7 @@ export default function Incoterms() {
         </p>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

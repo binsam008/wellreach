@@ -157,9 +157,9 @@ export default function Home() {
       </section>
 
       {/* ======================= FOOTER ======================= */}
-      <section id="footer">
+      {/* <section id="footer">
         <Footer />
-      </section>
+      </section> */}
 
     </main>
   );
