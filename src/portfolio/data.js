@@ -25,19 +25,30 @@ const users = [
     ],
   },
 
-  {
-    slug: "ali",
-    name: "Ali",
-    role: "Operations Manager",
-    phone: "+97399999999",
-    description: "Logistics expert",
+{
+  slug: "visakh-pv",
+  name: "Visakh P V",
+  role: "Managing Partner",
+  phone: "+91 8137015484",
+  email: "visakh@wellreachlogistics.com",
+  description:
+    "Shipping & freight forwarding expert.",
 
-    profileImage: "/images/ali.jpg",
-    bannerImage: "/images/banner2.jpg",
+  profileImage: "/visakh.jpeg",
+  bannerImage: "/air.png",
 
-    social: {},
-    services: ["Warehousing", "Custom Clearance"],
+  social: {
+    linkedin:
+      "https://www.linkedin.com/in/visakh-pv-41409031",
   },
+
+  services: [
+    "Freight Forwarding",
+    "International Couriers",
+    "Airline GSA",
+    "Logistics Management",
+  ],
+},
 ];
 
 export default users;
