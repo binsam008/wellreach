@@ -32,7 +32,7 @@ const users = [
   phone: "+91 8137015484",
   email: "visakh@wellreachlogistics.com",
   description:
-    "Shipping & freight forwarding expert.",
+    "Worked with - Freighters, Airline GSA, Freight Forwarders, International Couriers (Integrated Carriers).",
 
   profileImage: "/visakh.jpeg",
   bannerImage: "/air.png",
