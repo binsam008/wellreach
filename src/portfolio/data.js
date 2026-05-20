@@ -38,6 +38,7 @@ const users = [
   bannerImage: "/air.png",
 
   social: {
+    whatsapp: "https://wa.me/+918137015484",
     linkedin:
       "https://www.linkedin.com/in/visakh-pv-41409031",
   },
