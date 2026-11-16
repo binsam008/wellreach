@@ -114,10 +114,10 @@ export default function Contact() {
         <div className="p-5 text-sm space-y-4 text-gray-700">
 
           {/* Branch Head */}
-          <div className="flex items-start gap-2 font-medium text-gray-900">
+          {/* <div className="flex items-start gap-2 font-medium text-gray-900">
             <User size={18} className="text-purple-700 min-w-[18px]" />
             <span>Branch Head: {head}</span>
-          </div>
+          </div> */}
 
           {/* Address */}
           <div className="flex items-start gap-2">
