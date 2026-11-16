@@ -6,8 +6,8 @@ export default function Contact() {
 
   const branches = [
     {
-      title: "Head Office – Calicut",
-      head: "Krishna Raj P S",
+      title: "Calicut",
+
       body: {
         address: (
           <>
@@ -16,7 +16,7 @@ export default function Contact() {
           </>
         ),
         maps: "https://maps.google.com/?q=Peringatt+Building,+Civil+Station,+Calicut",
-        email: "krishna@wellreachlogistics.com",
+        email: "connect@wellreachlogistics.com",
         phone: "+91 99021 85610",
       },
       whatsapp: "+919902185610",
@@ -25,7 +25,7 @@ export default function Contact() {
 
     {
       title: "Cochin",
-      head: "Visakh P V",
+
       body: {
         address: (
           <>
@@ -35,7 +35,7 @@ export default function Contact() {
           </>
         ),
         maps: "https://maps.google.com/?q=Giri+Nagar,+Kadavanthara,+Cochin",
-        email: "visakh@wellreachlogistics.com",
+        email: "connect@wellreachlogistics.com",
         phone: "+91 81370 15484",
       },
       whatsapp: "+918137015484",
@@ -43,7 +43,7 @@ export default function Contact() {
 
     {
       title: "Bangalore",
-      head: "Varun Dev P V",
+
       body: {
         address: (
           <>
@@ -51,7 +51,7 @@ export default function Contact() {
           </>
         ),
         maps: "https://maps.google.com/?q=Sapthagiri+Layout,+Maruthi+Nagar,+Bengaluru",
-        email: "varun@wellreachlogistics.com",
+        email: "connect@wellreachlogistics.com",
         phone: "+91 87140 02443",
       },
       whatsapp: "+918714002443",
@@ -59,7 +59,7 @@ export default function Contact() {
 
     {
       title: "Bahrain – Overseas Office",
-      head: "Sajid Moosa",
+
       body: {
         address: (
           <>
@@ -69,7 +69,7 @@ export default function Contact() {
           </>
         ),
         maps: "https://maps.google.com/?q=Hoora+Bahrain",
-        email: "sajid@wellreachlogistics.com",
+        email: "connect@wellreachlogistics.com",
         phone: "+973 3311 3858",
       },
       whatsapp: "+97333113858",
