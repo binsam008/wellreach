@@ -1,45 +1,36 @@
 // src/sections/ServicesPreview.jsx
 import React, { useState } from "react";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 const SERVICES = [
   { id: "air-freight", title: "Air Freight", img: "/services/2.png" },
   { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.png" },
-  { id: "international-courier", title: "International Courier", img: "/services/3.png" },
+  { id: "air-freight", title: "International Courier", img: "/services/3.png" },
   { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/Events & Project Cargo.png" },
   { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/Dangerous Goods (DG) Cargo.png" },
   { id: "customs-clearance", title: "Customs Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
-  { id: "excess-baggage", title: "Excess Baggage", img: "/services/Excess.png" },
+  { id: "air-freight", title: "Excess Baggage", img: "/services/Excess.png" },
   { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/Temperature-Controlled Cargo.png" },
-  { id: "warehouse-management-1", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
+  { id: "warehouse-storage", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
   { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/Cargo Insurance.png" },
-  { id: "Land Transport", title: "Land Transport", img: "/services/Land Transportation.png" },
+  { id: "land-transport", title: "Land Transport", img: "/services/Land Transportation.png" },
 ];
 
 
 function ServiceCard({ s }) {
-  const [failed, setFailed] = useState(false);
-  const placeholder = "/assets/placeholder.png";
-
   return (
     <article className="relative rounded-2xl overflow-hidden bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       
       {/* IMAGE */}
       <div className="w-full h-[220px] sm:h-[260px] md:h-[220px] lg:h-[280px] bg-slate-100 relative overflow-hidden">
-        {!failed ? (
-          <img
-            src={s.img}
-            alt={s.title}
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-            onError={(e) => {
-              setFailed(true);
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = placeholder;
-            }}
-            draggable={false}
-          />
-        ) : (
-          <img src={placeholder} alt="placeholder" className="w-full h-full object-cover" draggable={false} />
-        )}
+        <ResponsiveImage
+          src={s.img}
+          alt={s.title}
+          sizes="(max-width: 767px) calc(100vw - 44px), (max-width: 1023px) 48vw, 32vw"
+          pictureClassName="block h-full"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          draggable={false}
+        />
 
         {/* TITLE OVERLAY */}
         <div className="absolute left-4 bottom-4">

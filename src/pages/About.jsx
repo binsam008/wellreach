@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../sections/Footer";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function About() {
   return (
@@ -35,9 +36,10 @@ export default function About() {
 
           {/* IMAGE */}
           <div>
-            <img
+            <ResponsiveImage
               src="/about-image.jpg"
               alt="Container Port"
+              sizes="(max-width: 767px) calc(100vw - 64px), 560px"
               className="w-5xl h-140 rounded-2xl shadow-lg object-cover"
             />
           </div>
@@ -48,9 +50,10 @@ export default function About() {
 
           {/* LEFT IMAGE */}
           <div>
-            <img
+            <ResponsiveImage
               src="/vision-worker.jpg"
               alt="Worker Vision"
+              sizes="(max-width: 767px) calc(100vw - 64px), 560px"
               className="rounded-2xl shadow-lg w-5xl h-120 object-cover"
             />
           </div>

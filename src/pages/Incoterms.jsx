@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import Footer from "../sections/Footer";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Incoterms() {
   const tableRef = useRef(null);
@@ -52,9 +53,10 @@ export default function Incoterms() {
 
         {/* LOGO */}
         <div className="flex justify-center mb-6">
-          <img
+          <ResponsiveImage
             src="/nav1.png"
             alt="Well Reach Logistics Logo"
+            sizes="260px"
             className="h-16 w-auto object-contain"
           />
         </div>

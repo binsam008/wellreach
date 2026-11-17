@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Phone, UserPlus, Zap, ShieldCheck, ArrowUpRight, MessageCircle, Facebook, Instagram, Linkedin } from "lucide-react";
 import users from "./data";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Portfolio() {
   const { slug } = useParams();
@@ -53,9 +54,10 @@ export default function Portfolio() {
             <div className="relative w-28 h-28 mb-6 mx-0">
               <div className="w-full h-full rounded-2xl bg-gradient-to-br from-[#5154B6] to-[#3b3d8a] shadow-lg border-4 border-white overflow-hidden">
                 {user.profileImage ? (
-                  <img 
+                  <ResponsiveImage
                     src={user.profileImage} 
                     alt={user.name} 
+                    sizes="112px"
                     className="w-full h-full object-cover"
                     onError={(e) => { e.target.style.display = 'none'; }}
                   />
@@ -146,7 +148,7 @@ export default function Portfolio() {
             </div>
 
             <div className="mt-12 pt-8 border-t border-slate-100 flex items-center justify-end">
-                <img src="/nav1.png" alt="Company Logo" className="h-8 opacity-40 grayscale" />
+                <ResponsiveImage src="/nav1.png" sizes="150px" alt="Company Logo" className="h-8 opacity-40 grayscale" />
             </div>
           </div>
         </div>

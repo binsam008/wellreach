@@ -1,6 +1,10 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { imageSources } from "../imageSources";
+
+const desktopExpert = imageSources("/expert-hero-desktop.jpg");
+const mobileExpert = imageSources("/expert-hero-mobile.png");
 
 export default function ExpertCTA() {
   return (
@@ -10,13 +14,28 @@ export default function ExpertCTA() {
         {/* RESPONSIVE BACKGROUND IMAGE */}
         <picture>
           <source
-            srcSet="/expert-hero-desktop.jpg"
+            srcSet={desktopExpert.webp}
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            type="image/webp"
             media="(min-width: 768px)"
           />
+          <source
+            srcSet={desktopExpert.fallback}
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            type="image/jpeg"
+            media="(min-width: 768px)"
+          />
+          <source srcSet={mobileExpert.webp} sizes="100vw" type="image/webp" />
 
           <img
-            src="/expert-hero-mobile.png"
+            src={mobileExpert.src}
+            srcSet={mobileExpert.fallback}
+            sizes="100vw"
+            width={mobileExpert.width}
+            height={mobileExpert.height}
             alt="Logistics expert communication"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </picture>

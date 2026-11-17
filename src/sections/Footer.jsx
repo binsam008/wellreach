@@ -1,6 +1,7 @@
 import React from "react";
 import { FiInstagram, FiFacebook, FiLinkedin } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom"
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         
         {/* Logo */}
         <div>
-          <img src="/navlogo.png" className="h-10 mb-4" alt="logo" />
+          <ResponsiveImage src="/navlogo.png" sizes="151px" className="h-10 mb-4" alt="logo" />
         </div>
 
         {/* Services Provided */}
@@ -51,7 +52,7 @@ export default function Footer() {
 
       {/* Mobile Layout */}
       <div className="md:hidden text-center px-6">
-        <img src="/navlogo.png" className="h-10 mx-auto mb-6" alt="logo" />
+        <ResponsiveImage src="/navlogo.png" sizes="151px" className="h-10 mx-auto mb-6" alt="logo" />
 
         <h3 className="font-semibold mb-2 text-[#ffffff]">Services Provided</h3>
         <ul className="text-sm space-y-1 mb-6">

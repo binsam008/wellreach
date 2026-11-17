@@ -7,6 +7,7 @@ import {
   FiAward,
   FiTruck,
 } from "react-icons/fi";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function WhyChoose() {
   const leftItems = [
@@ -86,9 +87,10 @@ const Card = ({ icon, title, body }) => (
 
           {/* TRUCK IMAGE FLOATING */}
           <div className="flex justify-center">
-            <img
-              src="./why-choose-truck.png"
+            <ResponsiveImage
+              src="/why-choose-truck.png"
               alt="Well Reach Logistics Truck"
+              sizes="(max-width: 1280px) 33vw, 450px"
               className="h-[450px] scale-[1.18] animate-upDown"
             />
           </div>

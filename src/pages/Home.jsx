@@ -7,6 +7,10 @@ import ServicesPreview from "../sections/ServicesPreview";
 import Footer from "../sections/Footer";
 import AboutUs from "../sections/AboutUs";
 import TextBand from "../components/MovingBand";
+import { imageSources } from "../imageSources";
+
+const desktopHero = imageSources("/hero-desktop.jpg");
+const mobileHero = imageSources("/hero-mobile.png");
 
 export default function Home() {
   return (
@@ -15,30 +19,22 @@ export default function Home() {
 {/* ======================= HERO SECTION ======================= */}
 <div className="relative w-full h-175 overflow-hidden min-h-[150px] md:min-h-[900px]">
 
-  {/* -------- DESKTOP BACKGROUND -------- */}
-  <img
-    src="/hero-desktop.jpg"
-    alt="Hero"
-    className="
-      hidden md:block
-      absolute inset-0
-      w-full h-full
-      
-    "
-  />
-
-  {/* -------- MOBILE BACKGROUND -------- */}
-  <img
-    src="/hero-mobile.png"
-    alt="Hero Mobile"
-    className="
-      md:hidden
-      absolute inset-0
-      w-full h-full
-      object-cover object-center
-      pointer-events-none
-    "
-  />
+  <picture>
+    <source media="(min-width: 768px)" type="image/webp" srcSet={desktopHero.webp} sizes="100vw" />
+    <source media="(min-width: 768px)" type="image/jpeg" srcSet={desktopHero.fallback} sizes="100vw" />
+    <source type="image/webp" srcSet={mobileHero.webp} sizes="100vw" />
+    <img
+      src={mobileHero.src}
+      srcSet={mobileHero.fallback}
+      sizes="100vw"
+      width={mobileHero.width}
+      height={mobileHero.height}
+      alt="Hero"
+      fetchPriority="high"
+      decoding="async"
+      className="absolute inset-0 w-full h-full object-cover object-center md:object-fill pointer-events-none"
+    />
+  </picture>
 
   {/* ======================= DESKTOP TEXT ======================= */}
   <div className="hidden md:flex items-center py-50 relative z-20">

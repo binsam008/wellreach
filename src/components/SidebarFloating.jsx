@@ -9,6 +9,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
+import ResponsiveImage from "./ResponsiveImage";
 
 const logoSrc = "/logo.png";
 
@@ -115,7 +116,7 @@ export default function SidebarFloating() {
             {/* Logo - top of the vertical stack */}
             <motion.div variants={itemVariants} className="flex items-center justify-center">
               <div className="bg-white rounded-full p-1 shadow-md w-12 h-12 flex items-center justify-center">
-                <img src={logoSrc} alt="WellReach" className="w-8 h-8 object-contain" />
+                <ResponsiveImage src={logoSrc} alt="WellReach" sizes="32px" className="w-8 h-8 object-contain" />
               </div>
             </motion.div>
 

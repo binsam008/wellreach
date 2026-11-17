@@ -1,4 +1,5 @@
  import React from "react";
+import ResponsiveImage from "../components/ResponsiveImage";
 
 export default function AboutUs() {
   return (
@@ -58,27 +59,33 @@ time, in the right condition.
             
             {/* Big image */}
             <div className="row-span-2 rounded-2xl overflow-hidden card-shadow h-140">
-              <img
-                src="./about-ship2.jpg"
+              <ResponsiveImage
+                src="/about-ship2.jpg"
                 alt="Container Ship"
+                sizes="(max-width: 1280px) 25vw, 330px"
+                pictureClassName="block h-full"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Top small image */}
             <div className="rounded-2xl overflow-hidden card-shadow h-66" >
-              <img
-                src="./about-warehouse.jpg"
+              <ResponsiveImage
+                src="/about-warehouse.jpg"
                 alt="Warehouse"
+                sizes="(max-width: 1280px) 25vw, 330px"
+                pictureClassName="block h-full"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Bottom small image */}
             <div className="rounded-2xl overflow-hidden card-shadow h-66">
-              <img
-                src="./about-inspection.jpg"
+              <ResponsiveImage
+                src="/about-inspection.jpg"
                 alt="Container Inspection"
+                sizes="(max-width: 1280px) 25vw, 330px"
+                pictureClassName="block h-full"
                 className="w-full h-full object-cover"
               />
             </div>

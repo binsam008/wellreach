@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ResponsiveImage from "./ResponsiveImage";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,9 +60,11 @@ export default function Navbar() {
 
             {/* LOGO */}
             <Link to="/" className="flex items-center">
-              <img
+              <ResponsiveImage
                 src={logoSrc}
                 alt="Well Reach Logistics"
+                sizes="(max-width: 767px) 180px, 210px"
+                loading="eager"
                 className="h-12 w-auto transition-all duration-300"
               />
             </Link>
@@ -112,7 +115,7 @@ export default function Navbar() {
           >
             <div className="rounded-r-2xl w-72 h-full bg-white shadow-xl p-6 flex flex-col">
               <div className="flex items-center justify-between mb-6">
-                <img src="/nav1.png" className="h-10" alt="Logo" />
+                <ResponsiveImage src="/nav1.png" sizes="180px" loading="eager" className="h-10" alt="Logo" />
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md bg-gray-200"

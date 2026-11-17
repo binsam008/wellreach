@@ -1,0 +1,641 @@
+{
+  "/about-image.jpg": {
+    "width": 1893,
+    "height": 2517,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/about-image-480.webp",
+        "fallback": "/optimized/about-image-480.jpg",
+        "webpBytes": 86134,
+        "fallbackBytes": 128957
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/about-image-960.webp",
+        "fallback": "/optimized/about-image-960.jpg",
+        "webpBytes": 274480,
+        "fallbackBytes": 437444
+      },
+      {
+        "width": 1280,
+        "webp": "/optimized/about-image-1280.webp",
+        "fallback": "/optimized/about-image-1280.jpg",
+        "webpBytes": 417336,
+        "fallbackBytes": 700515
+      }
+    ]
+  },
+  "/about-ship2.jpg": {
+    "width": 894,
+    "height": 1998,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/about-ship2-480.webp",
+        "fallback": "/optimized/about-ship2-480.jpg",
+        "webpBytes": 78944,
+        "fallbackBytes": 138530
+      },
+      {
+        "width": 894,
+        "webp": "/optimized/about-ship2-894.webp",
+        "fallback": "/optimized/about-ship2-894.jpg",
+        "webpBytes": 204532,
+        "fallbackBytes": 383914
+      }
+    ]
+  },
+  "/about-warehouse.jpg": {
+    "width": 1008,
+    "height": 984,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/about-warehouse-480.webp",
+        "fallback": "/optimized/about-warehouse-480.jpg",
+        "webpBytes": 57346,
+        "fallbackBytes": 85139
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/about-warehouse-960.webp",
+        "fallback": "/optimized/about-warehouse-960.jpg",
+        "webpBytes": 165894,
+        "fallbackBytes": 262462
+      }
+    ]
+  },
+  "/about-inspection.jpg": {
+    "width": 1258,
+    "height": 1258,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/about-inspection-480.webp",
+        "fallback": "/optimized/about-inspection-480.jpg",
+        "webpBytes": 20794,
+        "fallbackBytes": 47140
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/about-inspection-960.webp",
+        "fallback": "/optimized/about-inspection-960.jpg",
+        "webpBytes": 48516,
+        "fallbackBytes": 130013
+      }
+    ]
+  },
+  "/vision-worker.jpg": {
+    "width": 521,
+    "height": 607,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/vision-worker-480.webp",
+        "fallback": "/optimized/vision-worker-480.jpg",
+        "webpBytes": 19472,
+        "fallbackBytes": 48710
+      },
+      {
+        "width": 521,
+        "webp": "/optimized/vision-worker-521.webp",
+        "fallback": "/optimized/vision-worker-521.jpg",
+        "webpBytes": 21604,
+        "fallbackBytes": 54655
+      }
+    ]
+  },
+  "/why-choose-truck.png": {
+    "width": 813,
+    "height": 813,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/why-choose-truck-480.webp",
+        "fallback": "/optimized/why-choose-truck-480.png",
+        "webpBytes": 15878,
+        "fallbackBytes": 97683
+      },
+      {
+        "width": 813,
+        "webp": "/optimized/why-choose-truck-813.webp",
+        "fallback": "/optimized/why-choose-truck-813.png",
+        "webpBytes": 27152,
+        "fallbackBytes": 216931
+      }
+    ]
+  },
+  "/hero-desktop.jpg": {
+    "width": 875,
+    "height": 588,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/hero-desktop-480.webp",
+        "fallback": "/optimized/hero-desktop-480.jpg",
+        "webpBytes": 9236,
+        "fallbackBytes": 22962
+      },
+      {
+        "width": 875,
+        "webp": "/optimized/hero-desktop-875.webp",
+        "fallback": "/optimized/hero-desktop-875.jpg",
+        "webpBytes": 21084,
+        "fallbackBytes": 57021
+      }
+    ]
+  },
+  "/hero-mobile.png": {
+    "width": 440,
+    "height": 956,
+    "versions": [
+      {
+        "width": 440,
+        "webp": "/optimized/hero-mobile-440.webp",
+        "fallback": "/optimized/hero-mobile-440.jpg",
+        "webpBytes": 18212,
+        "fallbackBytes": 50911
+      }
+    ]
+  },
+  "/expert-hero-desktop.jpg": {
+    "width": 4152,
+    "height": 2334,
+    "versions": [
+      {
+        "width": 768,
+        "webp": "/optimized/expert-hero-desktop-768.webp",
+        "fallback": "/optimized/expert-hero-desktop-768.jpg",
+        "webpBytes": 45392,
+        "fallbackBytes": 73069
+      },
+      {
+        "width": 1440,
+        "webp": "/optimized/expert-hero-desktop-1440.webp",
+        "fallback": "/optimized/expert-hero-desktop-1440.jpg",
+        "webpBytes": 181792,
+        "fallbackBytes": 280962
+      },
+      {
+        "width": 1920,
+        "webp": "/optimized/expert-hero-desktop-1920.webp",
+        "fallback": "/optimized/expert-hero-desktop-1920.jpg",
+        "webpBytes": 311186,
+        "fallbackBytes": 499827
+      }
+    ]
+  },
+  "/expert-hero-mobile.png": {
+    "width": 440,
+    "height": 614,
+    "versions": [
+      {
+        "width": 440,
+        "webp": "/optimized/expert-hero-mobile-440.webp",
+        "fallback": "/optimized/expert-hero-mobile-440.jpg",
+        "webpBytes": 26962,
+        "fallbackBytes": 59119
+      }
+    ]
+  },
+  "/logo.png": {
+    "width": 3520,
+    "height": 4096,
+    "versions": [
+      {
+        "width": 64,
+        "webp": "/optimized/logo-64.webp",
+        "fallback": "/optimized/logo-64.png",
+        "webpBytes": 1674,
+        "fallbackBytes": 3577
+      },
+      {
+        "width": 96,
+        "webp": "/optimized/logo-96.webp",
+        "fallback": "/optimized/logo-96.png",
+        "webpBytes": 2612,
+        "fallbackBytes": 6010
+      }
+    ]
+  },
+  "/nav1.png": {
+    "width": 657,
+    "height": 171,
+    "versions": [
+      {
+        "width": 320,
+        "webp": "/optimized/nav1-320.webp",
+        "fallback": "/optimized/nav1-320.png",
+        "webpBytes": 9962,
+        "fallbackBytes": 22422
+      },
+      {
+        "width": 657,
+        "webp": "/optimized/nav1-657.webp",
+        "fallback": "/optimized/nav1-657.png",
+        "webpBytes": 22248,
+        "fallbackBytes": 78872
+      }
+    ]
+  },
+  "/navlogo.png": {
+    "width": 151,
+    "height": 40,
+    "versions": [
+      {
+        "width": 151,
+        "webp": "/optimized/navlogo-151.webp",
+        "fallback": "/optimized/navlogo-151.png",
+        "webpBytes": 2356,
+        "fallbackBytes": 4391
+      }
+    ]
+  },
+  "/sajid.png": {
+    "width": 300,
+    "height": 300,
+    "versions": [
+      {
+        "width": 160,
+        "webp": "/optimized/sajid-160.webp",
+        "fallback": "/optimized/sajid-160.jpg",
+        "webpBytes": 3438,
+        "fallbackBytes": 7221
+      }
+    ]
+  },
+  "/visakh.jpeg": {
+    "width": 800,
+    "height": 800,
+    "versions": [
+      {
+        "width": 160,
+        "webp": "/optimized/visakh-160.webp",
+        "fallback": "/optimized/visakh-160.jpg",
+        "webpBytes": 6532,
+        "fallbackBytes": 10169
+      }
+    ]
+  },
+  "/services/2.png": {
+    "width": 1408,
+    "height": 736,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/2-480.webp",
+        "fallback": "/optimized/services/2-480.jpg",
+        "webpBytes": 23406,
+        "fallbackBytes": 36681
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/2-960.webp",
+        "fallback": "/optimized/services/2-960.jpg",
+        "webpBytes": 83662,
+        "fallbackBytes": 128040
+      }
+    ]
+  },
+  "/services/3.png": {
+    "width": 1408,
+    "height": 736,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/3-480.webp",
+        "fallback": "/optimized/services/3-480.jpg",
+        "webpBytes": 12468,
+        "fallbackBytes": 26501
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/3-960.webp",
+        "fallback": "/optimized/services/3-960.jpg",
+        "webpBytes": 29398,
+        "fallbackBytes": 71852
+      }
+    ]
+  },
+  "/services/Cargo Insurance.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/cargo-insurance-480.webp",
+        "fallback": "/optimized/services/cargo-insurance-480.jpg",
+        "webpBytes": 14742,
+        "fallbackBytes": 30741
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/cargo-insurance-960.webp",
+        "fallback": "/optimized/services/cargo-insurance-960.jpg",
+        "webpBytes": 35310,
+        "fallbackBytes": 84559
+      }
+    ]
+  },
+  "/services/Customs Clearance & Ministry Approvals.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/customs-clearance-ministry-approvals-480.webp",
+        "fallback": "/optimized/services/customs-clearance-ministry-approvals-480.jpg",
+        "webpBytes": 15956,
+        "fallbackBytes": 32124
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/customs-clearance-ministry-approvals-960.webp",
+        "fallback": "/optimized/services/customs-clearance-ministry-approvals-960.jpg",
+        "webpBytes": 38122,
+        "fallbackBytes": 89145
+      }
+    ]
+  },
+  "/services/Dangerous Goods (DG) Cargo.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/dangerous-goods-dg-cargo-480.webp",
+        "fallback": "/optimized/services/dangerous-goods-dg-cargo-480.jpg",
+        "webpBytes": 21756,
+        "fallbackBytes": 40689
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/dangerous-goods-dg-cargo-960.webp",
+        "fallback": "/optimized/services/dangerous-goods-dg-cargo-960.jpg",
+        "webpBytes": 53028,
+        "fallbackBytes": 113381
+      }
+    ]
+  },
+  "/services/Events & Project Cargo.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/events-project-cargo-480.webp",
+        "fallback": "/optimized/services/events-project-cargo-480.jpg",
+        "webpBytes": 31710,
+        "fallbackBytes": 51933
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/events-project-cargo-960.webp",
+        "fallback": "/optimized/services/events-project-cargo-960.jpg",
+        "webpBytes": 81426,
+        "fallbackBytes": 151293
+      }
+    ]
+  },
+  "/services/Excess.png": {
+    "width": 1408,
+    "height": 736,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/excess-480.webp",
+        "fallback": "/optimized/services/excess-480.jpg",
+        "webpBytes": 16270,
+        "fallbackBytes": 30982
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/excess-960.webp",
+        "fallback": "/optimized/services/excess-960.jpg",
+        "webpBytes": 38122,
+        "fallbackBytes": 88105
+      }
+    ]
+  },
+  "/services/Land Transportation.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/land-transportation-480.webp",
+        "fallback": "/optimized/services/land-transportation-480.jpg",
+        "webpBytes": 21308,
+        "fallbackBytes": 35767
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/land-transportation-960.webp",
+        "fallback": "/optimized/services/land-transportation-960.jpg",
+        "webpBytes": 76860,
+        "fallbackBytes": 126808
+      }
+    ]
+  },
+  "/services/ocean.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/ocean-480.webp",
+        "fallback": "/optimized/services/ocean-480.jpg",
+        "webpBytes": 19146,
+        "fallbackBytes": 34999
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/ocean-960.webp",
+        "fallback": "/optimized/services/ocean-960.jpg",
+        "webpBytes": 51008,
+        "fallbackBytes": 104648
+      }
+    ]
+  },
+  "/services/Temperature-Controlled Cargo.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/temperature-controlled-cargo-480.webp",
+        "fallback": "/optimized/services/temperature-controlled-cargo-480.jpg",
+        "webpBytes": 13986,
+        "fallbackBytes": 29516
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/temperature-controlled-cargo-960.webp",
+        "fallback": "/optimized/services/temperature-controlled-cargo-960.jpg",
+        "webpBytes": 31576,
+        "fallbackBytes": 79920
+      }
+    ]
+  },
+  "/services/Warehouse Management & Distribution.png": {
+    "width": 4608,
+    "height": 3072,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/services/warehouse-management-distribution-480.webp",
+        "fallback": "/optimized/services/warehouse-management-distribution-480.jpg",
+        "webpBytes": 26292,
+        "fallbackBytes": 46618
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/services/warehouse-management-distribution-960.webp",
+        "fallback": "/optimized/services/warehouse-management-distribution-960.jpg",
+        "webpBytes": 65148,
+        "fallbackBytes": 134004
+      }
+    ]
+  },
+  "/service-page/air.jpg": {
+    "width": 1200,
+    "height": 672,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/air-480.webp",
+        "fallback": "/optimized/service-page/air-480.jpg",
+        "webpBytes": 24522,
+        "fallbackBytes": 43598
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/air-960.webp",
+        "fallback": "/optimized/service-page/air-960.jpg",
+        "webpBytes": 57256,
+        "fallbackBytes": 119663
+      }
+    ]
+  },
+  "/service-page/ocean.jpg": {
+    "width": 1200,
+    "height": 672,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/ocean-480.webp",
+        "fallback": "/optimized/service-page/ocean-480.jpg",
+        "webpBytes": 17984,
+        "fallbackBytes": 32397
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/ocean-960.webp",
+        "fallback": "/optimized/service-page/ocean-960.jpg",
+        "webpBytes": 61062,
+        "fallbackBytes": 109166
+      }
+    ]
+  },
+  "/service-page/custom.jpg": {
+    "width": 1200,
+    "height": 800,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/custom-480.webp",
+        "fallback": "/optimized/service-page/custom-480.jpg",
+        "webpBytes": 11186,
+        "fallbackBytes": 24805
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/custom-960.webp",
+        "fallback": "/optimized/service-page/custom-960.jpg",
+        "webpBytes": 24702,
+        "fallbackBytes": 66622
+      }
+    ]
+  },
+  "/service-page/land.jpg": {
+    "width": 1200,
+    "height": 672,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/land-480.webp",
+        "fallback": "/optimized/service-page/land-480.jpg",
+        "webpBytes": 16108,
+        "fallbackBytes": 30440
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/land-960.webp",
+        "fallback": "/optimized/service-page/land-960.jpg",
+        "webpBytes": 37436,
+        "fallbackBytes": 84857
+      }
+    ]
+  },
+  "/service-page/warehouse.jpg": {
+    "width": 1200,
+    "height": 800,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/warehouse-480.webp",
+        "fallback": "/optimized/service-page/warehouse-480.jpg",
+        "webpBytes": 41676,
+        "fallbackBytes": 61135
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/warehouse-960.webp",
+        "fallback": "/optimized/service-page/warehouse-960.jpg",
+        "webpBytes": 129430,
+        "fallbackBytes": 202718
+      }
+    ]
+  },
+  "/service-page/cargo.jpg": {
+    "width": 1200,
+    "height": 800,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/cargo-480.webp",
+        "fallback": "/optimized/service-page/cargo-480.jpg",
+        "webpBytes": 14680,
+        "fallbackBytes": 32087
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/cargo-960.webp",
+        "fallback": "/optimized/service-page/cargo-960.jpg",
+        "webpBytes": 35270,
+        "fallbackBytes": 90435
+      }
+    ]
+  },
+  "/service-page/packaging.jpg": {
+    "width": 1200,
+    "height": 669,
+    "versions": [
+      {
+        "width": 480,
+        "webp": "/optimized/service-page/packaging-480.webp",
+        "fallback": "/optimized/service-page/packaging-480.jpg",
+        "webpBytes": 26364,
+        "fallbackBytes": 43291
+      },
+      {
+        "width": 960,
+        "webp": "/optimized/service-page/packaging-960.webp",
+        "fallback": "/optimized/service-page/packaging-960.jpg",
+        "webpBytes": 64666,
+        "fallbackBytes": 125106
+      }
+    ]
+  }
+}
