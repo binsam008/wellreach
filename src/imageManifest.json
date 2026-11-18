@@ -252,32 +252,6 @@
       }
     ]
   },
-  "/sajid.png": {
-    "width": 300,
-    "height": 300,
-    "versions": [
-      {
-        "width": 160,
-        "webp": "/optimized/sajid-160.webp",
-        "fallback": "/optimized/sajid-160.jpg",
-        "webpBytes": 3438,
-        "fallbackBytes": 7221
-      }
-    ]
-  },
-  "/visakh.jpeg": {
-    "width": 800,
-    "height": 800,
-    "versions": [
-      {
-        "width": 160,
-        "webp": "/optimized/visakh-160.webp",
-        "fallback": "/optimized/visakh-160.jpg",
-        "webpBytes": 6532,
-        "fallbackBytes": 10169
-      }
-    ]
-  },
   "/services/2.png": {
     "width": 1408,
     "height": 736,

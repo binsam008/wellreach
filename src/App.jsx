@@ -1,7 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import TruckLoader from "./components/TruckLoader";
 import Portfolio from "./portfolio/Portfolio"; // ✅ keep here
 import Footer from "./sections/Footer";
 
@@ -13,6 +14,42 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Incoterms = lazy(() => import("./pages/Incoterms"));
 
 export default function App() {
+  const [progress, setProgress] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 90) {
+          clearInterval(interval);
+
+          setTimeout(() => {
+            setProgress(100);
+
+            setTimeout(() => {
+              setLoaded(true);
+            }, 600);
+          }, 300);
+
+          return 90;
+        }
+        return prev + 2;
+      });
+    }, 60);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Loader screen
+  if (!loaded) {
+    return (
+      <div className={progress === 100 ? "fade-out" : ""}>
+        <TruckLoader progress={progress} />
+      </div>
+    );
+  }
+
+  // Main App
   return (
     <BrowserRouter>
       <Navbar />

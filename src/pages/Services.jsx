@@ -203,6 +203,16 @@ export default function Services() {
            </svg>
           </a>
          </li>
+         <li>
+          <a href="#more-services">
+           <span aria-hidden="true" className="services-index__number">10</span>
+           <span>More ways to ship</span>
+           <svg aria-hidden="true" fill="none" height="17" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7h10v10" />
+            <path d="M7 17 17 7" />
+           </svg>
+          </a>
+         </li>
         </ol>
        </nav>
       </div>
@@ -832,6 +842,24 @@ export default function Services() {
         </span>
        </li>
       </ul>
+     </section>
+     <section aria-labelledby="services-more-heading" className="services-shell services-more" id="more-services">
+      <div className="services-section-heading">
+       <p className="services-eyebrow">MORE WAYS TO SHIP</p>
+       <h2 id="services-more-heading">Support for parcels and personal shipments.</h2>
+      </div>
+      <div className="services-more__grid">
+       <article id="international-courier">
+        <h3>International Courier</h3>
+        <p>Send parcels and documents internationally. Share your shipment details with our team to discuss courier options.</p>
+        <a className="services-text-link" href="/contact">Discuss your shipment</a>
+       </article>
+       <article id="excess-baggage">
+        <h3>Excess Baggage</h3>
+        <p>Arrange a separate shipment for excess baggage. Tell us the origin, destination and timing so we can discuss the next steps.</p>
+        <a className="services-text-link" href="/contact">Discuss your shipment</a>
+       </article>
+      </div>
      </section>
      <section aria-labelledby="services-contact-heading" className="services-shell services-contact">
       <div>

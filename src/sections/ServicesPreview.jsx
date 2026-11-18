@@ -5,11 +5,11 @@ import ResponsiveImage from "../components/ResponsiveImage";
 const SERVICES = [
   { id: "air-freight", title: "Air Freight", img: "/services/2.png" },
   { id: "ocean-freight", title: "Ocean Freight", img: "/services/ocean.png" },
-  { id: "air-freight", title: "International Courier", img: "/services/3.png" },
+  { id: "international-courier", title: "International Courier", img: "/services/3.png" },
   { id: "events-project-cargo", title: "Events and Project Cargo", img: "/services/Events & Project Cargo.png" },
   { id: "dangerous-goods", title: "Dangerous Goods (DG) Cargo", img: "/services/Dangerous Goods (DG) Cargo.png" },
   { id: "customs-clearance", title: "Customs Clearance", img: "/services/Customs Clearance & Ministry Approvals.png" },
-  { id: "air-freight", title: "Excess Baggage", img: "/services/Excess.png" },
+  { id: "excess-baggage", title: "Excess Baggage", img: "/services/Excess.png" },
   { id: "ata-carnet", title: "ATA Carnet Shipment", img: "/services/Temperature-Controlled Cargo.png" },
   { id: "warehouse-storage", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
   { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/Cargo Insurance.png" },

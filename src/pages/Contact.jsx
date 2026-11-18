@@ -1,6 +1,7 @@
 import React from "react";
 import { MessageCircle, Mail, Phone, User, MapPin, Copy } from "lucide-react";
 import Footer from "../sections/Footer";
+import ContactForm from "../components/ContactForm";
 
 export default function Contact() {
 
@@ -58,7 +59,7 @@ export default function Contact() {
     },
 
     {
-      title: "Bahrain – Overseas Office",
+      title: "Bahrain Office",
 
       body: {
         address: (
@@ -70,9 +71,9 @@ export default function Contact() {
         ),
         maps: "https://maps.google.com/?q=Hoora+Bahrain",
         email: "connect@wellreachlogistics.com",
-        phone: "+973 3311 3858",
+        phone: "+973 3927 7399",
       },
-      whatsapp: "+97333113858",
+      whatsapp: "+97339277399",
     },
   ];
 
@@ -181,18 +182,15 @@ export default function Contact() {
         <div className="hidden lg:grid grid-cols-2 gap-14">
 
           {/* Form */}
-          <form className="bg-white/70 backdrop-blur-lg border border-purple-100 shadow-xl rounded-2xl p-8 space-y-6">
-            <h3 className="text-xl font-semibold text-[#4A46C6]">
-              Send us a Message
-            </h3>
-
-            <input type="text" placeholder="Your Name" className="input-field" />
-            <input type="email" placeholder="Your Email" className="input-field" />
-            <input type="text" placeholder="Subject" className="input-field" />
-            <textarea rows="5" placeholder="Your Message" className="input-field" />
-
-            <button className="btn-primary w-full">Send Message</button>
-          </form>
+          <ContactForm
+            className="relative bg-white/70 backdrop-blur-lg border border-purple-100 shadow-xl rounded-2xl p-8 space-y-6"
+            title={
+              <h3 className="text-xl font-semibold text-[#4A46C6]">
+                Send us a Message
+              </h3>
+            }
+            placeholders={{ name: "Your Name", email: "Your Email", subject: "Subject", message: "Your Message" }}
+          />
 
           {/* Branches */}
           <div className="grid grid-cols-2 gap-6">
@@ -208,13 +206,10 @@ export default function Contact() {
             <BranchCard key={i} index={i} {...b} />
           ))}
 
-          <form className="bg-white shadow-lg rounded-xl p-6 space-y-5">
-            <input type="text" placeholder="Name" className="input-field" />
-            <input type="email" placeholder="Email" className="input-field" />
-            <input type="text" placeholder="Subject" className="input-field" />
-            <textarea rows="5" placeholder="Message" className="input-field" />
-            <button className="btn-primary w-full">Send Message</button>
-          </form>
+          <ContactForm
+            className="relative bg-white shadow-lg rounded-xl p-6 space-y-5"
+            placeholders={{ name: "Name", email: "Email", subject: "Subject", message: "Message" }}
+          />
         </div>
 
       </section>

@@ -43,9 +43,9 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-3">Social Media</h3>
           <div className="flex space-x-4 text-xl">
-            <a href="https://instagram.com" target="_blank" className="hover:text-black/70"><FiInstagram /></a>
-            <a href="https://facebook.com" target="_blank" className="hover:text-black/70"><FiFacebook /></a>
-            <a href="https://linkedin.com" target="_blank" className="hover:text-black/70"><FiLinkedin /></a>
+            <a href="https://www.instagram.com/wellreach_logistics/" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on Instagram" className="hover:text-black/70"><FiInstagram /></a>
+            <a href="https://www.facebook.com/WellReachLogistics/" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on Facebook" className="hover:text-black/70"><FiFacebook /></a>
+            <a href="https://in.linkedin.com/company/wellreachlogistics" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on LinkedIn" className="hover:text-black/70"><FiLinkedin /></a>
           </div>
         </div>
       </div>
@@ -75,9 +75,9 @@ export default function Footer() {
 
         <h3 className="font-semibold mb-3 text-[#ffffff]">Social Media</h3>
         <div className="flex justify-center space-x-5 text-2xl mb-4">
-          <a href="https://instagram.com" target="_blank"><FiInstagram /></a>
-          <a href="https://facebook.com" target="_blank"><FiFacebook /></a>
-          <a href="https://linkedin.com" target="_blank"><FiLinkedin /></a>
+          <a href="https://www.instagram.com/wellreach_logistics/" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on Instagram"><FiInstagram /></a>
+          <a href="https://www.facebook.com/WellReachLogistics/" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on Facebook"><FiFacebook /></a>
+          <a href="https://in.linkedin.com/company/wellreachlogistics" target="_blank" rel="noopener noreferrer" aria-label="Well Reach Logistics on LinkedIn"><FiLinkedin /></a>
         </div>
       </div>
 
