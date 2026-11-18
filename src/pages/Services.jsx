@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./Services.css";
+import { SHOW_WAREHOUSING } from "../siteSettings";
+
+// Item numbers and photo sides shift up by one after item 05 while warehousing is hidden.
+const num = (n) => String(!SHOW_WAREHOUSING && n > 5 ? n - 1 : n).padStart(2, "0");
+const detailClass = (n) => (Number(num(n)) % 2 === 0 ? "service-detail service-detail--reverse" : "service-detail");
 
 export default function Services() {
   const { hash } = useLocation();
@@ -123,6 +128,7 @@ export default function Services() {
            </svg>
           </a>
          </li>
+         {SHOW_WAREHOUSING && (
          <li>
           <a href="#warehouse-storage">
            <span aria-hidden="true" className="services-index__number">
@@ -139,10 +145,11 @@ export default function Services() {
            </svg>
           </a>
          </li>
+         )}
          <li>
           <a href="#cargo-handling">
            <span aria-hidden="true" className="services-index__number">
-            06
+            {num(6)}
            </span>
            <span>
             Cargo Handling
@@ -158,7 +165,7 @@ export default function Services() {
          <li>
           <a href="#packaging-solutions">
            <span aria-hidden="true" className="services-index__number">
-            07
+            {num(7)}
            </span>
            <span>
             Packing & Copacking Solutions
@@ -174,7 +181,7 @@ export default function Services() {
          <li>
           <a href="#specialist-cargo">
            <span aria-hidden="true" className="services-index__number">
-            08
+            {num(8)}
            </span>
            <span>
             Specialist cargo
@@ -190,7 +197,7 @@ export default function Services() {
          <li>
           <a href="#value-added-services">
            <span aria-hidden="true" className="services-index__number">
-            09
+            {num(9)}
            </span>
            <span>
             Value-added services
@@ -205,7 +212,7 @@ export default function Services() {
          </li>
          <li>
           <a href="#more-services">
-           <span aria-hidden="true" className="services-index__number">10</span>
+           <span aria-hidden="true" className="services-index__number">{num(10)}</span>
            <span>More ways to ship</span>
            <svg aria-hidden="true" fill="none" height="17" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="17" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 7h10v10" />
@@ -482,6 +489,7 @@ export default function Services() {
         </a>
        </div>
       </section>
+      {SHOW_WAREHOUSING && (
       <section aria-labelledby="warehouse-storage-heading" className="service-detail" id="warehouse-storage">
        <figure className="service-detail__media">
         <picture>
@@ -551,14 +559,15 @@ export default function Services() {
         </a>
        </div>
       </section>
-      <section aria-labelledby="cargo-handling-heading" className="service-detail service-detail--reverse" id="cargo-handling">
+      )}
+      <section aria-labelledby="cargo-handling-heading" className={detailClass(6)} id="cargo-handling">
        <figure className="service-detail__media">
         <picture>
          <source sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1050px) 44vw, 520px" srcSet="/optimized/service-page/cargo-480.webp 480w, /optimized/service-page/cargo-960.webp 960w, /service-page/cargo.webp 1200w" type="image/webp"/>
          <img alt="Cargo preparation and handling" decoding="async" height="800" loading="lazy" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1050px) 44vw, 520px" src="/service-page/cargo.jpg" srcSet="/optimized/service-page/cargo-480.jpg 480w, /optimized/service-page/cargo-960.jpg 960w, /service-page/cargo.jpg 1200w" width="1200"/>
         </picture>
         <span aria-hidden="true" className="service-detail__number">
-         06
+         {num(6)}
         </span>
        </figure>
        <div className="service-detail__copy">
@@ -617,14 +626,14 @@ export default function Services() {
         </a>
        </div>
       </section>
-      <section aria-labelledby="packaging-solutions-heading" className="service-detail" id="packaging-solutions">
+      <section aria-labelledby="packaging-solutions-heading" className={detailClass(7)} id="packaging-solutions">
        <figure className="service-detail__media">
         <picture>
          <source sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1050px) 44vw, 520px" srcSet="/optimized/service-page/packaging-480.webp 480w, /optimized/service-page/packaging-960.webp 960w, /service-page/packaging.webp 1200w" type="image/webp"/>
          <img alt="Packing and preparing goods for dispatch" decoding="async" height="669" loading="lazy" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1050px) 44vw, 520px" src="/service-page/packaging.jpg" srcSet="/optimized/service-page/packaging-480.jpg 480w, /optimized/service-page/packaging-960.jpg 960w, /service-page/packaging.jpg 1200w" width="1200"/>
         </picture>
         <span aria-hidden="true" className="service-detail__number">
-         07
+         {num(7)}
         </span>
        </figure>
        <div className="service-detail__copy">

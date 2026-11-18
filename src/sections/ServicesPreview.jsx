@@ -1,6 +1,7 @@
 // src/sections/ServicesPreview.jsx
 import React, { useState } from "react";
 import ResponsiveImage from "../components/ResponsiveImage";
+import { SHOW_WAREHOUSING } from "../siteSettings";
 
 const SERVICES = [
   { id: "air-freight", title: "Air Freight", img: "/services/2.png" },
@@ -94,7 +95,8 @@ function ServiceCard({ s }) {
 
 export default function ServicesPreview() {
   const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? SERVICES : SERVICES.slice(0, 3);
+  const shown = SERVICES.filter((s) => SHOW_WAREHOUSING || s.id !== "warehouse-storage");
+  const visible = expanded ? shown : shown.slice(0, 3);
 
   return (
     <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
