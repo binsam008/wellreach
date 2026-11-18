@@ -37,9 +37,9 @@ export default function Contact() {
         ),
         maps: "https://maps.google.com/?q=Giri+Nagar,+Kadavanthara,+Cochin",
         email: "connect@wellreachlogistics.com",
-        phone: "+91 81370 15484",
+        phone: "+91 95673 99499",
       },
-      whatsapp: "+918137015484",
+      whatsapp: "+919567399499",
     },
 
     {
@@ -53,9 +53,9 @@ export default function Contact() {
         ),
         maps: "https://maps.google.com/?q=Sapthagiri+Layout,+Maruthi+Nagar,+Bengaluru",
         email: "connect@wellreachlogistics.com",
-        phone: "+91 87140 02443",
+        phone: "+91 81370 15484",
       },
-      whatsapp: "+918714002443",
+      whatsapp: "+918137015484",
     },
 
     {

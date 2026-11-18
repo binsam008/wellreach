@@ -14,6 +14,7 @@ const SERVICES = [
   { id: "warehouse-storage", title: "Warehouse Management", img: "/services/Warehouse Management & Distribution.png" },
   { id: "cargo-insurance", title: "Cargo Insurance", img: "/services/Cargo Insurance.png" },
   { id: "land-transport", title: "Land Transport", img: "/services/Land Transportation.png" },
+  { id: "packaging-solutions", title: "Packaging", img: "/service-page/packaging.jpg" },
 ];
 
 
