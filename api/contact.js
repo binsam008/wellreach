@@ -37,7 +37,11 @@ export function validate(body) {
 }
 
 function readConfig() {
-  const env = process.env;
+  // Trim every value: a space or line break pasted into Vercel makes a correct password fail.
+  const env = Object.fromEntries(
+    ["MAIL_HOST", "SMTP_PORT", "IMAP_PORT", "MAIL_USER", "MAIL_PASS", "MAIL_FROM", "MAIL_TO", "IMAP_FOLDER"]
+      .map((key) => [key, (process.env[key] ?? "").trim()])
+  );
   const config = {
     host: env.MAIL_HOST,
     smtpPort: Number(env.SMTP_PORT || 465),
